@@ -1,0 +1,2 @@
+# superMarketEmpApp
+React - NodeJs project
