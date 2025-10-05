@@ -1,3 +1,7 @@
+@use 'Nav/nav';
+@use './variables';
+
+
 * {
     font-family: "eurostile", sans-serif;
     padding: 0;
@@ -6,11 +10,17 @@
 }
 
 
+$font-primary: "Delius", cursive;
 
 
 
 *:focus {
     outline: none;
+}
+
+
+a, li, p, h1, h2, h3, button, span {
+  font-family: $font-primary;
 }
 
 li {
@@ -21,6 +31,7 @@ li {
 body{
   font-family: "europa", sans-serif;
   position: relative;
+  min-height: 222vh;
 }
 
 

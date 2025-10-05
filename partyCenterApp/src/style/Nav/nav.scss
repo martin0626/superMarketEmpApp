@@ -1,0 +1,236 @@
+// ================================
+// 🌐 Navbar Styles (SCSS)
+// ================================
+
+@use '../variables.scss';
+
+// Variables
+$navbar-bg: #ffffff;
+$navbar-text: #333333f1;
+$navbar-accent: #D9A19B; // Indigo
+$transition: 0.3s ease-in-out;
+$z-navbar: 1000;
+$font-primary: "Delius", cursive;
+
+
+
+
+// Global reset for links
+a {
+    font-weight: bold;    
+    text-decoration: none;
+    color: inherit;
+    transition: color $transition;
+    font-weight: bold;
+}
+
+// Navbar Base
+.navbar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: $navbar-bg;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+    z-index: $z-navbar;
+
+    &__container {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+        height: 5.8rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &-logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: $navbar-accent;
+    }
+
+    &__links {
+        
+        display: none;
+
+        @media (min-width: 768px) {
+        display: flex;
+        gap: 2rem;
+        transition: all 0.3s;
+
+        a {
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: $navbar-text;
+            font-weight: bold;
+            letter-spacing: 1px;
+
+            &::first-letter {
+                color: $navbar-accent;
+                font-size: 1.6rem;
+            }
+
+            &:hover {
+                color: $navbar-accent;
+            }
+        }
+        }
+    }
+
+
+        &__toggle {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: $navbar-text;
+            display: block;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+
+            &:hover {
+                color: $navbar-accent;
+            }
+            &::first-letter {
+                color: $navbar-accent;
+                font-size: 1.4rem;
+            }
+
+            @media (min-width: 768px) {
+                display: none;
+            }
+        }
+}
+
+// Mobile Menu
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+
+    height: 100%;
+    background: $navbar-bg;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform $transition;
+    z-index: $z-navbar + 2;
+    display: flex;
+    flex-direction: column;
+
+    &--open {
+        transform: translateX(0);
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid #eee;
+
+        &__title {
+        font-weight: 600;
+        color: $navbar-accent;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 1.5rem;
+        gap: 2rem;
+
+        a {
+
+            font-weight: bold;
+            font-size: 2.2rem;
+            color: $navbar-text;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+
+        
+            &::first-letter {
+                color: $navbar-accent;
+                font-size: 3.2rem;
+            }
+
+            &:hover {
+                color: $navbar-accent;
+            }
+        }
+    }
+
+    &__close {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1.6rem;
+        color: $navbar-text;
+        transition: all 0.3s;
+
+        &:hover {
+            color: $navbar-accent;
+        }
+    }
+}
+
+// Overlay
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: $z-navbar;
+    transition: opacity $transition;
+}
+
+
+
+.menu-btn {
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem 0.4rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    color: $navbar-text;
+    position: fixed;
+    right: 8%;
+    top: 4%;
+    z-index: 100;
+    transition: all 0.3s;
+    background-color: #fff;
+    box-shadow: variables.$mainShodws;
+
+    &::first-letter {
+        font-size: 1.4rem;
+    }
+
+    &:hover{
+        background-color: $navbar-accent;
+        
+    }
+}
+
+
+
+.logo-image{
+    width: 4.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    img{
+        max-width: 100%;
+    }
+}
+
+
+.active-nav {
+    color: $navbar-accent !important;
+}
