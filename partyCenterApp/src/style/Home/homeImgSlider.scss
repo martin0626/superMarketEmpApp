@@ -2,13 +2,15 @@
 // 🌅 Cinematic Fullscreen Slideshow
 // ================================
 
+@use "../variables.scss";
+
 $transition: 1s ease-in-out;
 $text-color: #ffff;
 $overlay-gradient: linear-gradient(
   to bottom,
   #d9a19b27,
   #d9a19b33,
-  #d9a19b
+  #ff6b6bbb
 );
 
 .slideshow {

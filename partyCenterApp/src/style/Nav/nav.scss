@@ -7,7 +7,6 @@
 // Variables
 $navbar-bg: #ffffff;
 $navbar-text: #333333f1;
-$navbar-accent: #D9A19B; // Indigo
 $transition: 0.3s ease-in-out;
 $z-navbar: 1000;
 $font-primary: "Delius", cursive;
@@ -47,7 +46,7 @@ a {
     &-logo {
         font-size: 1.5rem;
         font-weight: 700;
-        color: $navbar-accent;
+        color: variables.$primaryColor;
     }
 
     &__links {
@@ -67,12 +66,12 @@ a {
             letter-spacing: 1px;
 
             &::first-letter {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
                 font-size: 1.6rem;
             }
 
             &:hover {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
             }
         }
         }
@@ -90,10 +89,10 @@ a {
             transition: all 0.3s;
 
             &:hover {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
             }
             &::first-letter {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
                 font-size: 1.4rem;
             }
 
@@ -136,7 +135,7 @@ a {
 
         &__title {
         font-weight: 600;
-        color: $navbar-accent;
+        color: variables.$primaryColor;
         }
     }
 
@@ -157,12 +156,12 @@ a {
 
         
             &::first-letter {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
                 font-size: 3.2rem;
             }
 
             &:hover {
-                color: $navbar-accent;
+                color: variables.$primaryColor;
             }
         }
     }
@@ -177,7 +176,7 @@ a {
         transition: all 0.3s;
 
         &:hover {
-            color: $navbar-accent;
+            color: variables.$primaryColor;
         }
     }
 }
@@ -214,7 +213,7 @@ a {
     }
 
     &:hover{
-        background-color: $navbar-accent;
+        background-color: variables.$primaryColor;
         
     }
 }
@@ -232,5 +231,5 @@ a {
 
 
 .active-nav {
-    color: $navbar-accent !important;
+    color: variables.$primaryColor !important;
 }

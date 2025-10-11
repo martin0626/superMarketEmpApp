@@ -24,9 +24,8 @@ const [current, setCurrent] = useState(0);
     return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Text motion + fade based on scroll position
-    const textOffset = Math.min(scrollY * 0.3, 150); // move up to 80px
-    const textOpacity = Math.max(1 - scrollY / 2000, 0); // fade out after ~2000px
+    // Text motion 
+    const textOffset = Math.min(scrollY * 0.3, 150); // move up to 150px
 
     return (
     <section className="slideshow">

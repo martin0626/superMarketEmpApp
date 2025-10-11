@@ -1,0 +1,10 @@
+@use './homeImgSlider';
+@use './about';
+@use './pricing.scss';
+
+
+.main-home-page{
+    display: flex;
+    flex-direction: column;
+    gap: 26rem;
+}

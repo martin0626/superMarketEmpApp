@@ -1,0 +1,112 @@
+@use "sass:color";
+@use "../variables";
+
+$text-color: #333;
+$font-main: 'Nunito', sans-serif;
+
+.about {
+  font-family: $font-main;
+  background-color: variables.$bg-color;
+  color: $text-color;
+  padding: 5rem 1rem;
+
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .about-image-box {
+    flex: 1 1 400px;
+    border: 2px dashed variables.$primaryColor;
+    border-radius: 20px;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 0 4px variables.$bg-color;
+  }
+
+  .about-image {
+    width: 100%;
+    border-radius: 15px;
+    display: block;
+  }
+
+  .about-content {
+    flex: 1 1 400px;
+    max-width: 500px;
+  }
+
+  .about-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #3b345c;
+    margin-bottom: 1rem;
+  }
+
+  .about-highlight {
+    color: variables.$primaryColor;
+    font-weight: 700;
+  }
+
+  .about-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+
+  .about-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    justify-content: center;
+  }
+
+  .button-contact,
+  .button-learn {
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .button-contact {
+    background: variables.$primaryColor;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(variables.$primaryColor, 0.3);
+
+    &:hover {
+      background: #fff;
+      color: variables.$primaryColor;
+    }
+  }
+
+  .button-learn {
+    border: 2px solid variables.$primaryColor;
+    color: variables.$primaryColor;
+    background: transparent;
+
+    &:hover {
+      background: variables.$primaryColor;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}

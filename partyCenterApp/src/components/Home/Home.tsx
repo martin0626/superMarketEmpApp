@@ -1,4 +1,6 @@
+import AboutSection from "./AboutSection";
 import HomeImageSlider from "./HomeImageSlider";
+import Pricing from "./Pricing";
 
 export default function Home() {
   let images = [
@@ -7,6 +9,10 @@ export default function Home() {
   ];
 
   return (
-    <HomeImageSlider images={images} interval={7000}/>
+    <section className="main-home-page">
+      <HomeImageSlider images={images} interval={7000}/>
+      <AboutSection/>
+      <Pricing/>
+    </section>    
   )
 }
