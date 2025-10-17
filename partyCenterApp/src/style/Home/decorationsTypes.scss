@@ -1,6 +1,6 @@
 $primary-color: #6759ef;
 $secondary-color: #ff6b6b;
-$highlight-color: #f9b233;
+$highlight-color: #ff6b6b;
 $bg-color: #fff9f3;
 $text-dark: #3b345c;
 $font-main: 'Nunito', sans-serif;
@@ -13,29 +13,7 @@ $font-main: 'Nunito', sans-serif;
   position: relative;
   overflow: hidden;
 
-  // === WAVE BORDERS ===
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 6rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-
-  &::before {
-    top: 0;
-    transform: rotate(180deg);
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ff6b6b' fill-opacity='1' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
-
-  &::after {
-    bottom: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ff6b6b' fill-opacity='1' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
+ 
 
   .packages-container {
     position: relative;
@@ -104,6 +82,9 @@ $font-main: 'Nunito', sans-serif;
     .package-content {
       flex: 1;
       padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
       h3 {
         font-size: 1.5rem;
@@ -127,11 +108,12 @@ $font-main: 'Nunito', sans-serif;
         font-size: 1rem;
         cursor: pointer;
         transition: all 0.3s ease;
+        background-color: #fff;
 
         &:hover {
-          background-color: currentColor;
-          color: #fff;
+          transform: scale(1.02);
         }
+        
       }
     }
   }
@@ -141,7 +123,7 @@ $font-main: 'Nunito', sans-serif;
       flex-direction: column !important;
 
       .package-image {
-        height: 15rem;
+        height: 8rem;
       }
     }
   }

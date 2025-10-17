@@ -1,8 +1,13 @@
 
 export default function ContactHome(){
   return (
-     <div className="booking">
-      <div className="booking-left">
+     <section className="booking">
+
+      <div className="contact-form-container">
+
+      </div>
+
+      {/* <div className="booking-left">
         <h2 className="booking-title">Book Online</h2>
         <p className="booking-description">
           To find out more information, speak to a party expert.
@@ -46,8 +51,8 @@ export default function ContactHome(){
         <input type="number" className="booking-input" placeholder="Amount of children" />
         <input type="date" className="booking-input" />
         <button type="submit" className="booking-button">Send</button>
-      </form>
-    </div>
+      </form> */}
+    </section>
   );
 };
 

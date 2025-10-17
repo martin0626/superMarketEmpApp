@@ -15,9 +15,10 @@ export default function Home() {
     <section className="main-home-page">
       <HomeImageSlider images={images} interval={7000}/>
       <AboutSection/>
-      <Pricing/>
-      <DecorationTypes/>
       <GalleryHome/>
+      {/* Currentttly No Needed */}
+      {/* <Pricing/> */}
+      <DecorationTypes/>
       <ContactHome/>
     </section>    
   )

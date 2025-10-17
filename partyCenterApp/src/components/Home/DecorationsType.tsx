@@ -16,21 +16,21 @@ export default function DecorationTypes(){
       description:
         "Classics are proven with time and generations and never get old, no matter how much smartphones and social media conquer kids’ minds. Amazing music, designed themes, and active games have been the main ingredients of a fun party for many centuries and generations.",
       img: "https://tinsleytreasures.com/cdn/shop/files/IMG_2513_jpg.jpg?v=1731428931&width=1445",
-      color: "#6759ef",
+      color: "#ff6b6b",
     },
     {
       title: "Deluxe Party",
       description:
         "Deluxe Party is a great option for those who do not settle for less. If you want to go all the way in for your kid’s holiday, that’s exactly the option for you. Your kid’s favorite heroes, rare themes, and multi-level quests and games – and it’s not even a full list yet.",
       img: "https://i.etsystatic.com/23753139/r/il/477d06/3672054672/il_570xN.3672054672_e540.jpg",
-      color: "#ff6b6b",
+      color: "#9CAD6F",
       reverse: true,
     },
     {
       title: "Ultimate Party",
       description:
         "The Ultimate Party is the pinnacle of celebration! Perfect for larger groups and unforgettable experiences with top-tier activities, performances, and full customization for every detail.",
-      img: "https://images.squarespace-cdn.com/content/v1/55668890e4b0a63819e5bd65/1723665680396-1ETW91EGY5I1XVG4TAKH/surprise+birthday+balloon+outdoor+organic+arch.jpeg?format=1000w",
+      img: "https://i.pinimg.com/736x/44/4c/b6/444cb60fb413c4c9aa8d983eacf494f9.jpg",
       color: "#f9b233",
     },
   ];

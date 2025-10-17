@@ -16,115 +16,134 @@ $color-icon-bg: #7e89ff;
 // 🧩 Main Component
 // =====================
 .booking {
+  min-height: 32rem;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-around;
+  // align-items: flex-start;
   gap: 4rem;
-  padding: 4rem;
-  background-color: variables.$bg-color;
+  padding: 2rem;
+  background-color: $color-accent;
   font-family: 'Poppins', sans-serif;
 
-  &-left {
-    flex: 1;
-    max-width: 30rem;
-  }
 
-  &-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: $color-text;
-    margin-bottom: 1rem;
-  }
 
-  &-description {
-    font-size: 1rem;
-    color: $color-subtext;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-  }
+  .contact-form-container {
+    border-radius: 16px;
+    width: 80%;
+    height: 16rem;
+    box-shadow: variables.$mainShodws;
+    background-color: variables.$bg-color;
+    margin-top: -8rem;
 
-  &-info {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
 
-  &-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-
-  &-icon {
-    width: 2.5rem;
-    height: 2.5rem;
-    background-color: $color-icon-bg;
-    color: $color-white;
-    font-size: 1.2rem;
-    border-radius: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  &-details {
-    font-size: 1rem;
-    color: $color-text;
-
-    div + div {
-      margin-top: 0.2rem;
+    @media (max-width: 720px) {
+      width: 100%;
     }
   }
 
-  &-label {
-    font-weight: bold;
-    margin-bottom: 0.2rem;
-  }
+  // &-left {
+  //   flex: 1;
+  //   max-width: 30rem;
+  // }
 
-  &-form {
-    flex: 1;
-    max-width: 28rem;
-    background: $color-white;
-    padding: 2.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-  }
+  // &-title {
+  //   font-size: 2.5rem;
+  //   font-weight: 700;
+  //   color: $color-text;
+  //   margin-bottom: 1rem;
+  // }
 
-  &-input {
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 2rem;
-    background: $color-gray;
-    color: $color-text;
+  // &-description {
+  //   font-size: 1rem;
+  //   color: $color-subtext;
+  //   line-height: 1.6;
+  //   margin-bottom: 2rem;
+  // }
 
-    &::placeholder {
-      color: #999999;
-    }
+  // &-info {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 2rem;
+  // }
 
-    &[type='date'] {
-      padding-right: 2.5rem;
-      font-family: 'Poppins', sans-serif;
-    }
-  }
+  // &-item {
+  //   display: flex;
+  //   align-items: flex-start;
+  //   gap: 1rem;
+  // }
 
-  &-button {
-    padding: 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    background-color: $color-accent;
-    color: $color-white;
-    border: none;
-    border-radius: 2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+  // &-icon {
+  //   width: 2.5rem;
+  //   height: 2.5rem;
+  //   background-color: $color-icon-bg;
+  //   color: $color-white;
+  //   font-size: 1.2rem;
+  //   border-radius: 0.5rem;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   flex-shrink: 0;
+  // }
 
-    &:hover {
-      background-color: color.adjust($color-accent, $lightness: -5%);
-    }
-  }
+  // &-details {
+  //   font-size: 1rem;
+  //   color: $color-text;
+
+  //   div + div {
+  //     margin-top: 0.2rem;
+  //   }
+  // }
+
+  // &-label {
+  //   font-weight: bold;
+  //   margin-bottom: 0.2rem;
+  // }
+
+  // &-form {
+  //   flex: 1;
+  //   max-width: 28rem;
+  //   background: $color-white;
+  //   padding: 2.5rem;
+  //   border-radius: 0.5rem;
+  //   box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 1.25rem;
+  // }
+
+  // &-input {
+  //   padding: 1rem 1.5rem;
+  //   font-size: 1rem;
+  //   border: none;
+  //   border-radius: 2rem;
+  //   background: $color-gray;
+  //   color: $color-text;
+
+  //   &::placeholder {
+  //     color: #999999;
+  //   }
+
+  //   &[type='date'] {
+  //     padding-right: 2.5rem;
+  //     font-family: 'Poppins', sans-serif;
+  //   }
+  // }
+
+  // &-button {
+  //   padding: 1rem;
+  //   font-size: 1rem;
+  //   font-weight: bold;
+  //   background-color: $color-accent;
+  //   color: $color-white;
+  //   border: none;
+  //   border-radius: 2rem;
+  //   cursor: pointer;
+  //   transition: background-color 0.3s ease;
+
+  //   &:hover {
+  //     background-color: color.adjust($color-accent, $lightness: -5%);
+  //   }
+  // }
 }

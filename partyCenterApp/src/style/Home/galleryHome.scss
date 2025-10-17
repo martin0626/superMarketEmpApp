@@ -10,29 +10,7 @@ $highlight-color: #f9b233;
   position: relative;
   overflow: hidden;
 
-  // === wave top/bottom ===
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 6rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-
-  &::before {
-    top: 0;
-    transform: rotate(180deg);
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ff6b6b' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
-
-  &::after {
-    bottom: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23ff6b6b' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
+  
 
   .gallery-container {
     position: relative;
@@ -64,12 +42,20 @@ $highlight-color: #f9b233;
     }
   }
 
-  .gallery-grid {
+
+ 
+
+  .gallery-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
 
-    .gallery-item {
+    @media (max-width: 700px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .gallery-item-1, .gallery-item-2 {
       border-radius: 1rem;
       overflow: hidden;
       cursor: pointer;
@@ -88,6 +74,65 @@ $highlight-color: #f9b233;
       }
     }
   }
+
+
+  .gallery-two-items-group-0{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .gallery-item-1 {
+      height: 40%;
+    }
+
+    .gallery-item-2 {
+      height: 60%;
+    }
+  }
+
+
+  .gallery-two-items-group-1{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .gallery-item-1 {
+      height: 70%;
+    }
+
+    .gallery-item-2 {
+      height: 30%;
+    }
+  }
+
+
+  .gallery-two-items-group-2{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .gallery-item-1 {
+      height: 50%;
+
+      @media (max-width: 700px) {
+        height: 90%;
+      }
+    }
+
+    .gallery-item-2 {
+      height: 50%;
+
+      @media (max-width: 700px) {
+        height: 90%;
+      }
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: row;
+      grid-column: 1 / 3;
+    }
+  }
+
 
   // Lightbox
   .gallery-lightbox {

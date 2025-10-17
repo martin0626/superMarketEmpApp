@@ -17,29 +17,7 @@ $font-main: 'Nunito', sans-serif;
   overflow: hidden;
   text-align: center;
 
-  // ==== Wave Borders ====
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 6rem;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-  }
-
-  &::before {
-    top: 0;
-    transform: rotate(180deg);
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23fff9f3' fill-opacity='1' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
-
-  &::after {
-    bottom: 0;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'><path fill='%23fff9f3' fill-opacity='1' d='M0,160L80,149.3C160,139,320,117,480,138.7C640,160,800,224,960,240C1120,256,1280,224,1360,208L1440,192V320H0Z'></path></svg>");
-  }
+  
 
   .pricing-container {
     position: relative;
