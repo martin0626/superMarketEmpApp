@@ -16,7 +16,7 @@ $color-icon-bg: #7e89ff;
 // 🧩 Main Component
 // =====================
 .booking {
-  min-height: 32rem;
+  min-height: 42rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,18 +29,66 @@ $color-icon-bg: #7e89ff;
 
 
 
-  .contact-form-container {
+  .contacts-container {
     border-radius: 16px;
     width: 80%;
-    height: 16rem;
+    min-height: 22rem;
     box-shadow: variables.$mainShodws;
     background-color: variables.$bg-color;
     margin-top: -8rem;
+    text-align: center;
+    color: $color-accent;
+    
+
+   h2{
+      margin-top: 1rem;
+      font-size: 2.6rem;
+   }
+
+    &-wraper {
+      height: 14rem;
+      display: flex;
+      gap: 4rem;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s;
+    }
 
 
-    @media (max-width: 720px) {
+
+    @media (max-width: 1200px) {
       width: 100%;
     }
+
+    .logo-cont{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: center;
+      justify-content: center;
+      width: 18rem;
+      font-size: 1.5rem;
+      transition: all 0.3s;
+
+      &-logo {
+        font-size: 4rem;
+        transition: all 0.2s;
+
+        &:hover{
+          scale: 1.05;
+          cursor: pointer;
+        }
+      }
+
+     
+      &-text {
+        font-weight: bold;
+        font-size: 1.3rem;
+        pointer-events: none;
+      }
+    }
+
   }
 
   // &-left {

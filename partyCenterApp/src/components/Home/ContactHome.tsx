@@ -1,11 +1,33 @@
+import { FaInstagram, FaFacebookSquare  } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
 
 export default function ContactHome(){
+
   return (
      <section className="booking">
 
-      <div className="contact-form-container">
+      <article className="contacts-container">
+        
+        <h2>Нашите Контакти</h2>
+        <div className="contacts-container-wraper">
+          <div className="logo-cont">
+            <FaInstagram className="logo-cont-logo"/>
+            <p className="logo-cont-text">@TheHappyBalloonss</p>
+          </div>
 
-      </div>
+          <div className="logo-cont">
+            <FaFacebookSquare className="logo-cont-logo" />
+            <p className="logo-cont-text">TheHappyBalloonss</p>
+          </div>
+
+          <div className="logo-cont">
+            <SiGmail className="logo-cont-logo" />
+            <p className="logo-cont-text">TheHappyBalloonss</p>
+          </div>
+        </div>
+
+      </article>
 
       {/* <div className="booking-left">
         <h2 className="booking-title">Book Online</h2>
