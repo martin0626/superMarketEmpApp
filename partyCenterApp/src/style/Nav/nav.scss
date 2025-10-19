@@ -3,6 +3,7 @@
 // ================================
 
 @use '../variables.scss';
+@use './socialIcons.scss';
 
 // Variables
 $navbar-bg: #ffffff;
@@ -107,7 +108,11 @@ a {
     position: fixed;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 30%;
+
+    @media (max-width: 1300px) {
+        width: 50%;
+    }
 
     @media (max-width: 768px) {
         width: 100%;

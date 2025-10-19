@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import logoImg from '../../assets/LogoBalloons.png'
 import { FaBars, FaXmark } from "react-icons/fa6";
+import SocialIcons from "./Socials";
 
 
 type NavigationActive = {isActive: boolean};
@@ -106,6 +107,7 @@ export default function NavigationComp(){
               Услуги
           </NavLink>
         </div>
+        <SocialIcons/>
       </aside>
 
       {/* Overlay */}
