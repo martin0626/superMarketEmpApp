@@ -1,5 +1,14 @@
 
 export default function AboutSection(){
+
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
   return (
     <section className="about">
       <div className="about-container">
@@ -26,10 +35,10 @@ export default function AboutSection(){
             of planning, organizing, and carrying out an original party.
           </p>
           <div className="about-buttons">
-            <a href="#" className="button-contact">
+            <a onClick={()=> scrollToSection("contact-section")} className="button-primary">
               Contact Us
             </a>
-            <a href="#" className="button-learn">
+            <a href="#" className="button-primary-outlined">
               Learn More
             </a>
           </div>

@@ -1,6 +1,8 @@
 @use 'Nav/nav';
 @use './variables';
 @use './Home/homeMain';
+@use './Gallery/gallery';
+@use './global';
 
 * {
     font-family: "eurostile", sans-serif;
@@ -73,4 +75,18 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
   cursor: pointer;
+}
+
+
+html {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+
+    @media screen and (max-width: 920px) {
+      font-size: 80%;
+    }
+
+    @media screen and (max-width: 600px) {
+      font-size: 70%;
+    }
 }

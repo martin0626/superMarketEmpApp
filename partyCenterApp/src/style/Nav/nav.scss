@@ -73,6 +73,7 @@ a {
 
             &:hover {
                 color: variables.$primaryColor;
+                cursor: pointer;
             }
         }
         }
@@ -167,6 +168,8 @@ a {
 
             &:hover {
                 color: variables.$primaryColor;
+                cursor: pointer;
+
             }
         }
     }

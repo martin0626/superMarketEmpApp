@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import PortalComponent from "../Portal/Portal";
 
 
 type GalleryImagesT = [string, string][];
@@ -52,15 +54,17 @@ export default function GalleryHome(){
                 </div>
               </div>
             ))}
+             
         </article>
-
+        <NavLink to="/gallery" style={{marginTop: "4rem"}} className="button-white">
+          Виж още...
+        </NavLink>
         {selectedImage && (
-          <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
-            <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
-            {/* <button className="lightbox-close" onClick={() => setSelectedImage(null)}>
-              ✕
-            </button> */}
-          </div>
+          <PortalComponent>
+            <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
+              <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
+            </div>
+          </PortalComponent>
         )}
       </div>
     </section>

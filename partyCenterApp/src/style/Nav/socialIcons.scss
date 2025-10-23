@@ -5,19 +5,18 @@ $color-icon: #ff6b6b;   // icon default color
 $color-hover: #fff;  // icon hover color (same as bg)
 
 .social-icons {
-
     display: flex;
     justify-content: start;
     align-items: end;
     gap: 1.5rem;
-    background-color: $color-bg;
+    background-color: transparent;
     padding: 2rem;
     height: 100%;
 
 
     &__icon {
-        width: 70px;
-        height: 70px;
+        width: 5rem;
+        height: 5rem;
         border-radius: 50%;
         border: 1px solid rgba($color-white, 0.5);
         color: $color-icon;

@@ -1,7 +1,7 @@
 // import StaggeredMenu from './StaggeredMenu';
 
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logoImg from '../../assets/LogoBalloons.png'
 import { FaBars, FaXmark } from "react-icons/fa6";
 import SocialIcons from "./Socials";
@@ -10,11 +10,17 @@ import SocialIcons from "./Socials";
 type NavigationActive = {isActive: boolean};
 
 export default function NavigationComp(){
-   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const navigate = useNavigate();
 
   const toggleMenu = (): void => setIsOpen((prev) => !prev);
 
   const handleLinkClick = (): void => setIsOpen(false);
+
+  const scrollToSection = (id: string) => {
+      navigate("/", { state: { scrollTo: id } });
+      setIsOpen(false);
+  };
 
   return (
     <>
@@ -43,14 +49,10 @@ export default function NavigationComp(){
             onClick={handleLinkClick}>
               Галерия
           </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/services" 
-            onClick={handleLinkClick}>
-              Услуги
-          </NavLink>
+          <a   
+            onClick={()=> scrollToSection("contact-section")}>
+              Контакти
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -63,7 +65,7 @@ export default function NavigationComp(){
         </button>
       </div>
 
-      
+            
 
       {/* Mobile Menu */}
       <aside className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
@@ -98,14 +100,10 @@ export default function NavigationComp(){
             onClick={handleLinkClick}>
               Галерия
           </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/services" 
-            onClick={handleLinkClick}>
-              Услуги
-          </NavLink>
+          <a  
+            onClick={()=> scrollToSection("contact-section")}>
+              Контакти
+          </a>
         </div>
         <SocialIcons/>
       </aside>

@@ -12,7 +12,7 @@ export default function Home() {
   ];
 
   return (
-    <section className="main-home-page">
+    <section className="main-home-page show-left">
       <HomeImageSlider images={images} interval={7000}/>
       <AboutSection/>
       <GalleryHome/>

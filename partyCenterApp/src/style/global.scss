@@ -1,0 +1,89 @@
+@use './variables';
+
+.button-white {
+    border: 2px solid #fff;
+    color: #fff;
+    background: transparent;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #fff;
+      color: variables.$primaryColor;
+    }
+  }
+
+
+  .button-primary {
+    font-size: 1rem;
+    border: 2px solid variables.$primaryColor;
+    color: #fff;
+    background: variables.$primaryColor;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background: #fff;
+      color: variables.$primaryColor;
+    }
+  }
+
+  .button-primary-outlined {
+    font-size: 1rem;
+    border: 2px solid variables.$primaryColor;
+    color: variables.$primaryColor;
+    background: transparent;
+    display: inline-block;
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+
+    &:hover {
+      cursor: pointer;
+      background: variables.$primaryColor;
+      color: #fff;
+
+    }
+  }
+
+
+
+  //Animations
+
+  .show-left {
+    animation: slide-in 0.7s both;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+  .show-right {
+    animation: slide-in-right 0.7s both;
+  }
+  
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(100rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }

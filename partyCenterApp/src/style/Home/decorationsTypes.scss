@@ -2,14 +2,12 @@ $primary-color: #6759ef;
 $secondary-color: #ff6b6b;
 $highlight-color: #ff6b6b;
 $bg-color: #fff9f3;
-$text-dark: #3b345c;
-$font-main: 'Nunito', sans-serif;
+$text-dark: #ff6b6b;
 
 .packages {
   background: $bg-color;
   padding: 6rem 1rem;
   text-align: center;
-  font-family: $font-main;
   position: relative;
   overflow: hidden;
 
@@ -60,6 +58,7 @@ $font-main: 'Nunito', sans-serif;
     box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.05);
     text-align: left;
     transition: transform 0.3s ease;
+    height: 32rem;
 
     &:hover {
       transform: translateY(-0.5rem);
@@ -121,9 +120,10 @@ $font-main: 'Nunito', sans-serif;
   @media (max-width: 48rem) {
     .package-card {
       flex-direction: column !important;
+      height: 62rem;
 
       .package-image {
-        height: 8rem;
+        height: 45rem;
       }
     }
   }

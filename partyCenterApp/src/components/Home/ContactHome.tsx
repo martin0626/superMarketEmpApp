@@ -1,79 +1,48 @@
-import { FaInstagram, FaFacebookSquare  } from "react-icons/fa";
+import { FaInstagram, FaFacebookSquare, FaPhoneSquareAlt  } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import SocialIcons from "../Nav/Socials";
 
 
 export default function ContactHome(){
 
   return (
-     <section className="booking">
-
-      <article className="contacts-container">
-        
-        <h2>Нашите Контакти</h2>
-        <div className="contacts-container-wraper">
-          <div className="logo-cont">
-            <FaInstagram className="logo-cont-logo"/>
-            <p className="logo-cont-text">@TheHappyBalloonss</p>
-          </div>
-
-          <div className="logo-cont">
-            <FaFacebookSquare className="logo-cont-logo" />
-            <p className="logo-cont-text">TheHappyBalloonss</p>
-          </div>
-
-          <div className="logo-cont">
-            <SiGmail className="logo-cont-logo" />
-            <p className="logo-cont-text">TheHappyBalloonss</p>
-          </div>
+     <section className="booking" id="contact-section">
+      <section className="contact contact-section">
+        <SocialIcons/>
+        <div className="contact-left">
+          <h1 className="contact-title">Let’s Plan Your Perfect Party!</h1>
+          <p className="contact-subtitle">
+            We’d love to hear your ideas — fill out the form and we’ll get in touch
+            to make your celebration unforgettable.
+          </p>
         </div>
 
-      </article>
-
-      {/* <div className="booking-left">
-        <h2 className="booking-title">Book Online</h2>
-        <p className="booking-description">
-          To find out more information, speak to a party expert.
-          <br />
-          To make a booking, contact us by phone or inquire online.
-        </p>
-
-        <div className="booking-info">
-          <div className="booking-item">
-            <div className="booking-icon">📍</div>
-            <div className="booking-details">
-              <div className="booking-label">Address</div>
-              <div>150 Madison St, Brooklyn, NY 11216, USA</div>
-            </div>
+        <form className="contact-form">
+          <div className="contact-field">
+            <label htmlFor="email">Имейл*</label>
+            <input type="email" id="email" placeholder="Enter your email" required />
           </div>
 
-          <div className="booking-item">
-            <div className="booking-icon">📞</div>
-            <div className="booking-details">
-              <div className="booking-label">Phone</div>
-              <div>+1 (234) 567 89 00</div>
-              <div>+1 (234) 567 89 01</div>
-            </div>
+          <div className="contact-field">
+            <label htmlFor="phone">Телефон (optional)</label>
+            <input type="tel" id="phone" placeholder="Enter your phone number" />
           </div>
 
-          <div className="booking-item">
-            <div className="booking-icon">✉️</div>
-            <div className="booking-details">
-              <div className="booking-label">Email</div>
-              <div>supportkids@email.com</div>
-              <div>perfectkids@email.com</div>
-            </div>
+          <div className="contact-field">
+            <label htmlFor="description">Допълнителна информация (optional)</label>
+            <textarea
+              id="description"
+              rows={4}
+              placeholder="Tell us about your event..."
+              
+            ></textarea>
           </div>
-        </div>
-      </div>
 
-      <form className="booking-form">
-        <input type="text" className="booking-input" placeholder="Enter your full name" />
-        <input type="tel" className="booking-input" placeholder="Enter your phone number" />
-        <input type="email" className="booking-input" placeholder="Enter your e-mail" />
-        <input type="number" className="booking-input" placeholder="Amount of children" />
-        <input type="date" className="booking-input" />
-        <button type="submit" className="booking-button">Send</button>
-      </form> */}
+          <button type="submit" className="button-primary">
+            Send Message
+          </button>
+        </form>
+      </section>
     </section>
   );
 };

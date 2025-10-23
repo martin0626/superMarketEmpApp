@@ -1,3 +1,5 @@
+@use '../variables';
+
 $bg-color: #ff6b6b;
 $accent-color: #fff9f3 ;
 $text-dark: #ffff;
@@ -60,6 +62,8 @@ $highlight-color: #f9b233;
       overflow: hidden;
       cursor: pointer;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: variables.$mainShodws;
+
 
       img {
         width: 100%;
@@ -134,8 +138,11 @@ $highlight-color: #f9b233;
   }
 
 
-  // Lightbox
-  .gallery-lightbox {
+  
+}
+
+// Lightbox
+.gallery-lightbox {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.8);
@@ -169,4 +176,3 @@ $highlight-color: #f9b233;
       }
     }
   }
-}
