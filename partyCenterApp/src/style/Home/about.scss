@@ -1,13 +1,12 @@
 @use "sass:color";
 @use "../variables";
 
-$text-color: #333;
-$font-main: 'Nunito', sans-serif;
 
 .about {
-  font-family: $font-main;
+  position: relative;
+  overflow: hidden;
   background-color: variables.$bg-color;
-  color: $text-color;
+  color: variables.$text-dark;
   padding: 5rem 1rem;
 
   .about-container {
@@ -27,6 +26,7 @@ $font-main: 'Nunito', sans-serif;
     padding: 10px;
     background: #fff;
     box-shadow: 0 0 0 4px variables.$bg-color;
+    z-index: 1;
   }
 
   .about-image {
@@ -38,6 +38,7 @@ $font-main: 'Nunito', sans-serif;
   .about-content {
     flex: 1 1 400px;
     max-width: 500px;
+    z-index: 1;
   }
 
   .about-title {

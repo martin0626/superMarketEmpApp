@@ -1,6 +1,8 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import NavigationComp from "../components/Nav/Nav";
 import { useEffect } from "react";
+import Footer from "../components/Nav/Footer";
+import AnimatedOnScroll from "../components/Global/AnimationOnScroll";
 
 export default function Layout() {
 
@@ -24,6 +26,9 @@ export default function Layout() {
       <main className="mainComponent">
         <NavigationComp/>
         <Outlet />
+        <AnimatedOnScroll animation="fade-up" delay={100}>
+            <Footer/>
+        </AnimatedOnScroll>
       </main>
   );
 }

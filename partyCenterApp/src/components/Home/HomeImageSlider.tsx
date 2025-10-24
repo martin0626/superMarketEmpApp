@@ -11,17 +11,20 @@ const [current, setCurrent] = useState(0);
 
     // Auto change slides
     useEffect(() => {
-    const timer = setInterval(() => {
-        setCurrent((prev) => (prev + 1) % images.length);
-    }, interval);
-    return () => clearInterval(timer);
+
+        const timer = setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+        }, interval);
+
+        return () => clearInterval(timer);
+        
     }, [images.length, interval]);
 
     // Track scroll
     useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+        const handleScroll = () => setScrollY(window.scrollY);
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     // Text motion 

@@ -1,18 +1,11 @@
-@use "sass:color";
 @use "../variables.scss";
-
 
 //Form
 
-$color-bg: #fff6f5;
 $color-surface: #ffffff;
-$color-text-primary: #f55f56;
-$color-text-secondary: #333333b7;
+$color-text-secondary: #333333a2;
 $color-placeholder: #b49d9d;
 $color-border: #eed6d6;
-$color-accent: #f55f56;
-$color-accent-hover: #ff5959;
-$color-accent-shadow: rgba(255, 115, 115, 0.3);
 $color-focus-ring: rgba(255, 138, 138, 0.2);
 $color-shadow: rgba(0, 0, 0, 0.05);
 
@@ -28,9 +21,11 @@ $color-shadow: rgba(0, 0, 0, 0.05);
   align-items: center;
   gap: 4rem;
   padding: 2rem;
-  background-color: $color-accent;
+  background-color: variables.$primaryColor;
   font-family: 'Poppins', sans-serif;
-  }
+  position: relative;
+  overflow: hidden;
+}
 
 
 
@@ -40,11 +35,12 @@ $color-shadow: rgba(0, 0, 0, 0.05);
   
 
   &-section {
+    z-index: 1;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     justify-content: space-between;
-    background-color: $color-bg;
+    background-color: variables.$bg-color;
     border-radius: 2rem;
     padding: 4rem 6rem;
     box-shadow: 0 8px 30px $color-shadow;
@@ -53,6 +49,10 @@ $color-shadow: rgba(0, 0, 0, 0.05);
     @media (max-width: 900px) {
       grid-template-columns: repeat(1, 1fr);
       padding: 3rem;
+    }
+
+    .social-icons {
+      justify-content: center !important;
     }
   }
 
@@ -78,7 +78,7 @@ $color-shadow: rgba(0, 0, 0, 0.05);
   &-title {
     font-family: "Poppins", sans-serif;
     font-size: 2.5rem;
-    color: $color-accent;
+    color: variables.$primaryColor;
     margin-bottom: 1rem;
   }
 
@@ -107,7 +107,7 @@ $color-shadow: rgba(0, 0, 0, 0.05);
     label {
       font-weight: 600;
       font-size: 0.95rem;
-      color: $color-text-primary;
+      color: variables.$primaryColor;
     }
 
     input,
@@ -121,7 +121,7 @@ $color-shadow: rgba(0, 0, 0, 0.05);
       transition: all 0.2s ease;
 
       &:focus {
-        border-color: $color-accent;
+        border-color: variables.$primaryColor;
         box-shadow: 0 0 0 3px $color-focus-ring;
       }
 
@@ -130,24 +130,4 @@ $color-shadow: rgba(0, 0, 0, 0.05);
       }
     }
   }
-
-  &-button {
-    // align-self: flex-start;
-    background: $color-accent;
-    color: #fff;
-    border: none;
-    border-radius: 1.5rem;
-    padding: 0.9rem 2.5rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.25s ease;
-    font-size: 1rem;
-
-    &:hover {
-      background: $color-accent-hover;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 15px $color-accent-shadow;
-    }
-  }
 }
-

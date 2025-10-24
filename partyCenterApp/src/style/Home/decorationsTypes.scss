@@ -1,17 +1,14 @@
+@use "../variables.scss";
+
+
 $primary-color: #6759ef;
-$secondary-color: #ff6b6b;
-$highlight-color: #ff6b6b;
-$bg-color: #fff9f3;
-$text-dark: #ff6b6b;
 
 .packages {
-  background: $bg-color;
+  background: variables.$bg-color;
   padding: 6rem 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-
- 
 
   .packages-container {
     position: relative;
@@ -26,13 +23,13 @@ $text-dark: #ff6b6b;
     .packages-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: $text-dark;
+      color: variables.$primaryColor;
     }
 
     .packages-divider {
       width: 4rem;
       height: 0.25rem;
-      background: $highlight-color;
+      background: variables.$primaryColor;
       margin: 1rem auto;
       border-radius: 1rem;
     }

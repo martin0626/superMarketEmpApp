@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import PortalComponent from "../Portal/Portal";
+import FlyBalloon from "../FlyBalloon";
 
 
 type GalleryImagesT = [string, string][];
@@ -23,8 +24,16 @@ export default function GalleryHome(){
     ],
   ];
 
+  
+
   return (
     <section className="gallery">
+      <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
+      <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+      <FlyBalloon color={"#E4A894"} size={60} left={"50%"} />
+      <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
+      <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
+      <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <div className="gallery-container">
         <div className="gallery-header">
           <h2 className="gallery-title">Gallery</h2>

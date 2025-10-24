@@ -1,0 +1,115 @@
+@use '../variables.scss';
+
+
+
+$color-surface: #f75f579a; 
+$color-text: #333;
+$color-white: #ffffff;
+
+// ==============================
+// 🧩 Footer Styles
+// ==============================
+.footer {
+    margin-top: 22rem;
+    background-color: variables.$bg-color;
+    color: $color-text;
+    padding: 1rem 2rem 2rem;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    .footer-top {
+        padding: 1rem 2rem;
+        width: fit-content;
+        border-bottom: 1px solid variables.$primaryColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        width: 12rem;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+        .footer-nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 2rem;
+            padding: 0;
+
+            a {
+                font-weight: 600;
+                font-size: 1rem;
+                cursor: pointer;
+                color: variables.$primaryColor;
+                transition: all 0.2s ease;
+                letter-spacing: 1px;
+
+            
+
+                &:hover {
+                    color: $color-surface;
+                }
+            }
+        }
+
+        .footer-socials {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+
+        .footer-icon {
+            width: 55px;
+            height: 55px;
+            border: 1.5px solid;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: variables.$primaryColor;
+            transition: all 0.25s ease;
+            cursor: pointer;
+
+            &:hover {
+                background: variables.$primaryColor;
+                color: $color-white;
+                transform: translateY(-4px);
+            }
+        }
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        color: #33333391;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.3rem;
+        
+
+       .footer-dev {
+            font-size: 0.85rem;
+                a {
+                    color: variables.$primaryColor;
+                    font-weight: bold;
+                    font-size: 1rem;
+                    transition: all 0.3s;
+                    &:hover {
+                        color: $color-surface;
+                    }
+                }
+            }
+        }
+}

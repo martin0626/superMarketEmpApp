@@ -1,9 +1,9 @@
 import AboutSection from "./AboutSection";
 import DecorationTypes from "./DecorationsType";
 import HomeImageSlider from "./HomeImageSlider";
-import Pricing from "./Pricing";
 import GalleryHome from "./GalleryHome";
 import ContactHome from "./ContactHome";
+import AnimatedOnScroll from "../Global/AnimationOnScroll";
 
 export default function Home() {
   let images = [
@@ -14,12 +14,21 @@ export default function Home() {
   return (
     <section className="main-home-page show-left">
       <HomeImageSlider images={images} interval={7000}/>
-      <AboutSection/>
-      <GalleryHome/>
-      {/* Currentttly No Needed */}
-      {/* <Pricing/> */}
-      <DecorationTypes/>
-      <ContactHome/>
+      <AnimatedOnScroll animation="fade-up" delay={100}>
+        <AboutSection />
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll animation="fade-up" delay={100}>
+        <GalleryHome />
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll animation="fade-up" delay={100}>
+        <DecorationTypes />
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll animation="fade-up" delay={100}>
+        <ContactHome />
+      </AnimatedOnScroll>
     </section>    
   )
 }

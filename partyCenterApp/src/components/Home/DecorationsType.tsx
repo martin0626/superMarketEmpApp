@@ -1,3 +1,5 @@
+import FlyBalloon from "../FlyBalloon";
+import AnimatedOnScroll from "../Global/AnimationOnScroll";
 
 
 
@@ -37,6 +39,12 @@ export default function DecorationTypes(){
 
   return (
     <section className="packages">
+      <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
+      <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+      <FlyBalloon color={"#E4A894"} size={60} left={"50%"} />
+      <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
+      <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
+      <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <div className="packages-container">
         <div className="packages-header">
           <h2 className="packages-title">Our Packages</h2>
@@ -48,25 +56,28 @@ export default function DecorationTypes(){
 
         <div className="packages-list">
           {packages.map((item, index) => (
-            <div
-              key={index}
-              className={`package-card ${item.reverse ? "reverse" : ""}`}
-            >
-              <div className="package-image">
-                <img src={item.img} alt={item.title} />
-              </div>
+             <AnimatedOnScroll animation={item.reverse ? "fade-left" : "fade-right"} delay={100}>
+              <div
+                key={index}
+                className={`package-card ${item.reverse ? "reverse" : ""}`}
+              >
+                <div className="package-image">
+                  <img src={item.img} alt={item.title} />
+                </div>
 
-              <div className="package-content">
-                <h3 style={{ color: item.color }}>{item.title}</h3>
-                <p>{item.description}</p>
-                <button
-                  className="package-btn"
-                  style={{ borderColor: item.color, color: item.color }}
-                >
-                  Learn More
-                </button>
+                <div className="package-content">
+                  <h3 style={{ color: item.color }}>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <button
+                    className="package-btn"
+                    style={{ borderColor: item.color, color: item.color }}
+                  >
+                    Learn More
+                  </button>
+                </div>
               </div>
-            </div>
+            </AnimatedOnScroll>
+
           ))}
         </div>
       </div>

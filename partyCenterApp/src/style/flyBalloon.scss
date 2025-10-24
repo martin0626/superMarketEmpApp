@@ -1,0 +1,40 @@
+$balloon-shadow: rgba(0, 0, 0, 0.15);
+$balloon-string: rgba(0, 0, 0, 0.3);
+
+// ==============================
+// 🎈 Balloon Animation Styles
+// ==============================
+.balloon {
+  position: absolute;
+  bottom: -150px; // start below the screen
+  border-radius: 50% 50% 45% 55% / 55% 45% 55% 45%;
+  box-shadow: inset -4px -6px 10px $balloon-shadow;
+  animation: balloon-fly 12s ease-in-out infinite;
+  z-index: 0;
+  opacity: 0.85;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5rem;
+    left: 50%;
+    width: 1px;
+    height: 5rem;
+    background: $balloon-string;
+    transform: translateX(-50%);
+  }
+}
+
+// ==============================
+// ✨ Keyframes
+// ==============================
+@keyframes balloon-fly {
+  0% {
+    transform: translateY(0) translateX(0) rotate(4deg);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: translateY(-220rem) translateX(-12rem) rotate(-4deg);
+  }
+}

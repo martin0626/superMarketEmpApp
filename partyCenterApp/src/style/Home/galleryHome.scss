@@ -1,12 +1,9 @@
 @use '../variables';
 
-$bg-color: #ff6b6b;
 $accent-color: #fff9f3 ;
-$text-dark: #ffff;
-$highlight-color: #f9b233;
 
 .gallery {
-  background: $bg-color;
+  background: variables.$primaryColor;
   padding: 6rem 1rem;
   text-align: center;
   position: relative;
@@ -27,7 +24,7 @@ $highlight-color: #f9b233;
     .gallery-title {
       font-size: 2.5rem;
       font-weight: 900;
-      color: $text-dark;
+      color: variables.$text-white;
     }
 
     .gallery-divider {
@@ -158,21 +155,5 @@ $highlight-color: #f9b233;
       border-radius: 1rem;
       object-fit: contain;
       box-shadow: 0 0 2rem rgba(0, 0, 0, 0.5);
-    }
-
-    .lightbox-close {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
-      background: transparent;
-      border: none;
-      font-size: 2rem;
-      color: #fff;
-      cursor: pointer;
-      transition: color 0.3s;
-
-      &:hover {
-        color: $highlight-color;
-      }
     }
   }

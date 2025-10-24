@@ -10,7 +10,7 @@ $overlay-gradient: linear-gradient(
   to bottom,
   #d9a19b27,
   #d9a19b33,
-  #ff6b6bbb
+  variables.$primaryColor
 );
 
 .slideshow {
@@ -22,7 +22,8 @@ $overlay-gradient: linear-gradient(
 
   // 🔹 Fancy angled / curved bottom border using clip-path
   // You can tweak these numbers to get a sharper or smoother effect
-    clip-path: polygon(0 0, 100% 0, 100% 94%, 78% 99%, 51% 97%, 33% 95%, 14% 98%, 0 93%);
+    // clip-path: polygon(0 0, 100% 0, 100% 94%, 78% 99%, 51% 97%, 33% 95%, 14% 98%, 0 93%);
+    border-radius:  0 0 50% 50%/  0 0 4rem 4rem;
 }
 // Individual slide
 .slide {

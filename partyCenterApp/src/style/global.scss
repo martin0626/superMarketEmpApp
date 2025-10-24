@@ -87,3 +87,116 @@
       transform: translateY(0);
     }
   }
+
+
+
+// ==============================
+// ⚙️ Simple SCSS Scroll Animation Classes
+// ==============================
+
+// Base animation timing
+$anim-duration: 0.8s;
+$anim-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+// --- Fade Up ---
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-up {
+  opacity: 0;
+  animation: fade-up $anim-duration $anim-ease forwards;
+}
+
+// --- Fade Down ---
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.anim-fade-down {
+  opacity: 0;
+  animation: fade-down $anim-duration $anim-ease forwards;
+}
+
+// --- Fade Left ---
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.anim-fade-left {
+  opacity: 0;
+  animation: fade-left $anim-duration $anim-ease forwards;
+}
+
+// --- Fade Right ---
+@keyframes fade-right {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.anim-fade-right {
+  opacity: 0;
+  animation: fade-right $anim-duration $anim-ease forwards;
+}
+
+// --- Scale Up ---
+@keyframes scale-up {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.anim-scale-up {
+  opacity: 0;
+  animation: scale-up $anim-duration $anim-ease forwards;
+}
+
+// --- Rotate In ---
+@keyframes rotate-in {
+  from {
+    opacity: 0;
+    transform: rotate(-6deg) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}
+
+.anim-rotate-in {
+  opacity: 0;
+  animation: rotate-in $anim-duration $anim-ease forwards;
+}
+

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PortalComponent from "../Portal/Portal";
+import FlyBalloon from "../FlyBalloon";
 
 type GalleryImagesT = [string, string, number][];
 
@@ -57,18 +58,24 @@ export default function Gallery() {
   ];
 
   return <section className="gallery-main show-right">
-      <div className="gallery-container">
-        <div className="gallery-header">
-          <h2 className="gallery-title">Gallery</h2>
-          <div className="gallery-divider" />
-          <p className="gallery-subtitle">
-            Our parties are always bright and fun.
-          </p>
-        </div>
+    <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
+    <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+    <FlyBalloon color={"#E4A894"} size={60} left={"50%"} />
+    <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
+    <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
+    <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
+    <div className="gallery-container">
+      <div className="gallery-header">
+        <h2 className="gallery-title">Gallery</h2>
+        <div className="gallery-divider" />
+        <p className="gallery-subtitle">
+          Our parties are always bright and fun.
+        </p>
+      </div>
 
-        <article className="gallery-images">
+      <article className="gallery-images">
 
-            {images.map((src, index) => (
+          {images.map((src, index) => (
               <div className={`gallery-two-items-group-${src[2]}`}>
                 <div
                   key={index}
@@ -85,16 +92,16 @@ export default function Gallery() {
                   <img src={src[1]} alt={`Gallery ${index + 1}`} />
                 </div>
               </div>
-            ))}
-        </article>
+          ))}
+      </article>
 
-        {selectedImage && (
-          <PortalComponent>
-            <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
-              <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
-            </div>
-          </PortalComponent>
-        )}
-      </div>
-    </section>
+      {selectedImage && (
+        <PortalComponent>
+          <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
+            <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
+          </div>
+        </PortalComponent>
+      )}
+    </div>
+  </section>
 }

@@ -1,3 +1,4 @@
+import FlyBalloon from "../FlyBalloon";
 
 export default function AboutSection(){
 
@@ -10,7 +11,13 @@ export default function AboutSection(){
   }
 
   return (
-    <section className="about">
+    <section className="about anim-fade-up">
+
+      <FlyBalloon color={"#C288FF"} size={80} left={"10%"} />
+      <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+      <FlyBalloon color={"#ff6b6b"} size={60} left={"50%"} />
+      <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
+      <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <div className="about-container">
         <div className="about-image-box">
           <img src="https://www.elliesparty.com/cdn/shop/products/pink-rainbow-balloon-arch-ombre-balloon-garland-kit-897306.jpg?v=1684344984" alt="Perfect Kids Party" className="about-image" />

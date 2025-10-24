@@ -1,8 +1,7 @@
+@use '../variables.scss';
+
 // 🎨 Color variables
-$color-bg: #fff;     // main purple background
-$color-white: #ff6b6b;  // white
-$color-icon: #ff6b6b;   // icon default color
-$color-hover: #fff;  // icon hover color (same as bg)
+$color-hover: #fff;
 
 .social-icons {
     display: flex;
@@ -18,8 +17,8 @@ $color-hover: #fff;  // icon hover color (same as bg)
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        border: 1px solid rgba($color-white, 0.5);
-        color: $color-icon;
+        border: 1px solid rgba(variables.$primaryColor, 0.5);
+        color: variables.$primaryColor;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,9 +26,9 @@ $color-hover: #fff;  // icon hover color (same as bg)
         transition: all 0.3s ease;
 
         &:hover {
-            background-color: $color-white;
+            background-color: variables.$primaryColor;
             color: $color-hover;
-            border-color: $color-white;
+            border-color: variables.$primaryColor;
             transform: translateY(-3px);
         }
     }
