@@ -57,7 +57,7 @@ export default function Gallery() {
     ],
   ];
 
-  return <section className="gallery-main show-right">
+  return <section className="gallery-main show-top">
     <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
     <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
     <FlyBalloon color={"#E4A894"} size={60} left={"50%"} />

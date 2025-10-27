@@ -4,27 +4,26 @@
 @use './Gallery/gallery';
 @use './global';
 @use './flyBalloon.scss';
+@use './Services/services.scss';
 
-* {
-    font-family: "eurostile", sans-serif;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
+
 
 
 $font-primary: "Delius", cursive;
 
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+}
 
 *:focus {
     outline: none;
 }
 
 
-a, li, p, h1, h2, h3, button, span {
-  font-family: $font-primary;
-}
+
 
 li {
     list-style: none;
@@ -32,10 +31,8 @@ li {
 
 
 body{
-  font-family: "europa", sans-serif;
   position: relative;
   min-height: 222vh;
-
   margin: 0;
   padding: 0;
   width: 100%;

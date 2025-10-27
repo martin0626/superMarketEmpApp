@@ -1,3 +1,16 @@
+import CardCarousel from "./CardCarousel";
+import Pricing from "./Pricing";
+import PricingCard from "./PricingCard";
+
 export default function Services() {
-  return <h2>Our Services</h2>;
+
+
+  
+  return (
+    <section className="show-top">
+        {/* <Pricing/> */}
+        {/* <PricingCard/> */}
+        <CardCarousel/>
+    </section>
+  );
 }

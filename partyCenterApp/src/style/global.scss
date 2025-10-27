@@ -81,7 +81,21 @@
   
   @keyframes slide-in-right {
     0% {
-      transform: translateX(100rem);
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+
+  .show-top{
+    animation: slide-in-top 0.7s both;
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-100%);
     }
     100% {
       transform: translateY(0);

@@ -45,6 +45,14 @@ export default function NavigationComp(){
             className={({isActive}: NavigationActive ) =>
                 isActive ? "active-nav" : ""
             }  
+            to="/services" 
+            onClick={handleLinkClick}>
+              Услуги
+          </NavLink>
+          <NavLink   
+            className={({isActive}: NavigationActive ) =>
+                isActive ? "active-nav" : ""
+            }  
             to="/gallery" 
             onClick={handleLinkClick}>
               Галерия
@@ -91,6 +99,14 @@ export default function NavigationComp(){
             to="/" 
             onClick={handleLinkClick}>
               Начало
+          </NavLink>
+          <NavLink   
+            className={({isActive}: NavigationActive ) =>
+                isActive ? "active-nav" : ""
+            }  
+            to="/services" 
+            onClick={handleLinkClick}>
+              Услуги
           </NavLink>
           <NavLink   
             className={({isActive}: NavigationActive ) =>

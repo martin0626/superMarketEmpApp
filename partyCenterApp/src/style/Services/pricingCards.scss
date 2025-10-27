@@ -1,0 +1,264 @@
+@use '../variables.scss';
+
+// =========================
+// 🎨 Variables
+// =========================
+$color-bg: #fff9f8;
+$color-primary: #ff6b6b;
+$color-primary-dark: #ff4d4d;
+$color-text-main: #004d40;
+$color-text-secondary: #333;
+$color-shadow: rgba(0, 0, 0, 0.1);
+
+.prices-slider-container{
+  min-height: 100vh;
+  background-color: $color-bg;
+  padding: 12rem 6rem;
+  width: 100%;
+
+  .price-card {
+    width: 60% !important;
+    height: 32rem;
+    background-color: #fff;
+    margin: 0 auto;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 16px;
+    overflow: hidden;
+
+    &-iamge-holder {
+      width: 100%;
+      height: 70%;
+
+      img{
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // ===================================
+// // 🎨 Color Variables
+// // ===================================
+// $color-primary: #ff6b6b;        // teal accent (pricing style)
+// $color-primary-dark: #ff6b6b;   // hover teal
+// $color-accent: #ff6b6b;         // coral accent (Perfect Kids)
+// $color-accent-dark: #ff4d4d;    // darker coral for hover
+// $color-bg-main: #fefaf9;        // soft neutral background
+// $color-bg-light: #fff5f5;       // light pink back
+// $color-white: #ffffff;          // pure white
+// $color-text-main: #004d40;      // dark teal text
+// $color-text-secondary: #333;    // secondary dark text
+// $color-shadow: rgba(0, 0, 0, 0.1); // soft card shadow
+
+// // ===================================
+// // 🃏 Flip Card Component
+// // ===================================
+// .card {
+//   perspective: 1200px;
+//   display: flex;
+//   flex-direction: column;
+//   gap: 4rem;
+//   justify-content: center;
+//   align-items: center;
+//   min-height: 100vh; // 600px
+//   background: $color-bg-main;
+
+//   &-inner {
+//     position: relative;
+//     width: 26.25rem; // 420px
+//     height: 32.5rem; // 520px
+//     transition: transform 0.8s ease;
+//     transform-style: preserve-3d;
+
+//     &-flipped {
+//       transform: rotateY(180deg);
+//     }
+//   }
+
+//   &-face {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     border-radius: 1.5rem;
+//     backface-visibility: hidden;
+//     background: $color-white;
+//     box-shadow: 0 0.625rem 1.5625rem $color-shadow; // 10px 25px
+//     padding: 2rem;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//   }
+
+//   &-face-back {
+//     transform: rotateY(180deg);
+//     background: $color-bg-light;
+//   }
+
+//   // ---------------------------------
+//   // Buttons
+//   // ---------------------------------
+//   &-buttons {
+//     display: flex;
+//     gap: 0.5rem;
+//   }
+
+//   &-button {
+//    font-size: 1rem;
+//     border: 2px solid variables.$primaryColor;
+//     color: variables.$primaryColor;
+//     background: transparent;
+//     display: inline-block;
+//     padding: 0.9rem 2rem;
+//     border-radius: 50px;
+//     font-weight: 700;
+//     text-decoration: none;
+//     transition: all 0.3s ease;
+
+//     &-active {
+//       background: variables.$primaryColor;
+//       color: $color-white;
+//     }
+
+//     &:hover {
+//       background: $color-primary-dark;
+//       color: $color-white;
+//       cursor: pointer;
+//     }
+//   }
+
+//   // ---------------------------------
+//   // Front Content
+//   // ---------------------------------
+//   &-content {
+//     margin-top: 3rem;
+//     text-align: center;
+
+//     &-back {
+//       margin-top: 5rem;
+//     }
+//   }
+
+//   &-title {
+//     font-size: 1.5rem;
+//     color: $color-text-main;
+//     margin-bottom: 1rem;
+//     letter-spacing: 0.0625rem; // 1px
+//   }
+
+//   &-price {
+//     font-size: 3rem;
+//     font-weight: bold;
+//     color: $color-text-main;
+//     margin-bottom: 1.5rem;
+
+//     .card-currency {
+//       color: $color-primary;
+//       font-size: 1.5rem;
+//       vertical-align: super;
+//     }
+
+//     .card-period {
+//       color: $color-primary;
+//       font-size: 1rem;
+//     }
+//   }
+
+//   &-features {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0 0 2rem 0;
+
+//     li {
+//       margin-bottom: 0.5rem;
+//       color: $color-text-secondary;
+//       font-size: 0.95rem;
+//     }
+//   }
+
+//   &-signUp {
+//     background: $color-primary;
+//     color: $color-white;
+//     border: none;
+//     border-radius: 1.5rem;
+//     padding: 0.6rem 2rem;
+//     cursor: pointer;
+//     transition: background 0.3s ease;
+
+//     &:hover {
+//       background: $color-primary-dark;
+//     }
+//   }
+
+//   // ---------------------------------
+//   // Back Content
+//   // ---------------------------------
+//   &-text {
+//     font-size: 1rem;
+//     color: $color-text-secondary;
+//     line-height: 1.5;
+//     margin-bottom: 2rem;
+
+//     strong {
+//       color: $color-accent;
+//     }
+//   }
+
+//   &-actions {
+//     display: flex;
+//     justify-content: center;
+//     gap: 1rem;
+//   }
+
+//   &-btn-primary {
+//     background: $color-accent;
+//     border: none;
+//     color: $color-white;
+//     padding: 0.6rem 1.5rem;
+//     border-radius: 2rem;
+//     cursor: pointer;
+//     font-weight: 600;
+//     transition: background 0.3s ease;
+
+//     &:hover {
+//       background: $color-accent-dark;
+//     }
+//   }
+
+//   &-btn-outline {
+//     background: none;
+//     border: 0.125rem solid $color-accent; // 2px
+//     color: $color-accent;
+//     padding: 0.6rem 1.5rem;
+//     border-radius: 2rem;
+//     cursor: pointer;
+//     font-weight: 600;
+//     transition: all 0.3s ease;
+
+//     &:hover {
+//       background: $color-accent;
+//       color: $color-white;
+//     }
+//   }
+// }
