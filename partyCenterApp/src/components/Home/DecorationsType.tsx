@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import FlyBalloon from "../FlyBalloon";
 import AnimatedOnScroll from "../Global/AnimationOnScroll";
 
@@ -68,12 +69,13 @@ export default function DecorationTypes(){
                 <div className="package-content">
                   <h3 style={{ color: item.color }}>{item.title}</h3>
                   <p>{item.description}</p>
-                  <button
+                  <Link 
+                    to='/services'
                     className="package-btn"
                     style={{ borderColor: item.color, color: item.color }}
                   >
                     Learn More
-                  </button>
+                  </Link>
                 </div>
               </div>
             </AnimatedOnScroll>

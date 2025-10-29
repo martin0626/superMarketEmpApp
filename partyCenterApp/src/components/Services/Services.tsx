@@ -21,7 +21,7 @@ export default function Services() {
       btnName: "Малка",
       price: 100,
       description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui doloremque architecto deserunt dolorem ut nam reprehenderit eligendi animi natus culpa magnam, id eaque, doloribus aperiam quam maiores sequi sint tenetur.",
-      img: 'https://ae01.alicdn.com/kf/S1203565424ea4a788d22cc24ca1ae72bk.jpg_640x640q90.jpg'
+      img: 'https://tinsleytreasures.com/cdn/shop/files/IMG_2513_jpg.jpg?v=1731428931&width=1445'
     },
     {
       title: "Голяма Арка",

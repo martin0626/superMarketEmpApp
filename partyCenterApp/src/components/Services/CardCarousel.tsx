@@ -1,6 +1,9 @@
 // import { useState } from "react";
 import Slider from "react-slick";
 import { type priceCardT } from "./Services";
+import FlyBalloon from "../FlyBalloon";
+import PortalComponent from "../Portal/Portal";
+import { useState } from "react";
 
 
 type cardCarouselPropsT = {
@@ -9,8 +12,7 @@ type cardCarouselPropsT = {
 }
 
 export default function CardCarousel({cards, title}: cardCarouselPropsT) {
-
-  // const [activeSlide, setActiveSlide] = useState(0);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const settings = {
     customPaging: function(i: any) {
@@ -28,9 +30,13 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
     slidesToScroll: 1,
   };
 
-
   return (
     <section className="prices-slider-container">
+      <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
+      <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+      <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
+      <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
+      <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <h1>{title}</h1>
       <Slider {...settings}>
         {
@@ -38,7 +44,7 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
                       key={index}
                       className="package-card-prices"
                     >
-                      <div className="package-prices-image">
+                      <div className="package-prices-image" onClick={() => setSelectedImage(card.img)}>
                         <img src={card.img} alt={card.title} />
                       </div>
 
@@ -61,6 +67,14 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
           )
         } 
       </Slider>
+
+      {selectedImage && (
+        <PortalComponent>
+          <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
+            <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
+          </div>
+        </PortalComponent>
+      )}
     </section>
   );
 }

@@ -3,13 +3,6 @@
 // =========================
 // 🎨 Variables
 // =========================
-$color-bg: #fff9f8;
-$color-primary: #ff6b6b;
-$color-primary-dark: #ff4d4d;
-$color-text-main: #004d40;
-$color-text-secondary: #333;
-$color-shadow: rgba(0, 0, 0, 0.1);
-
 
 .slick-slide {
   padding: 2rem;
@@ -21,6 +14,10 @@ $color-shadow: rgba(0, 0, 0, 0.1);
   align-items: center;
   gap: 2rem;
   justify-content: center;
+  top: -6%;
+  bottom: auto;
+  // position: relative;
+  // margin-bottom: 2rem;
 
   li {
     width: 8rem;
@@ -30,7 +27,7 @@ $color-shadow: rgba(0, 0, 0, 0.1);
 
 .slick-active {
   a {
-    background-color: $color-primary;
+    background-color: variables.$primaryColor;
     color: #fff;
     box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.5);
   }
@@ -56,25 +53,42 @@ $color-shadow: rgba(0, 0, 0, 0.1);
     color: #fff;
     box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.5);
   }
+
+  @media (max-width: 600px) {
+      &:hover {
+        cursor: pointer;
+        background: transparent;
+        color: variables.$primaryColor;
+        box-shadow: none;
+      }
+  }
 }
 
 
 .prices-slider-container{
   min-height: 120vh;
-  background-color: $color-bg;
+  background-color: variables.$bg-color;
   padding: 2rem 1rem;
   width: 100%;
   margin-bottom: 16rem; 
+  position: relative;
+  overflow: hidden;
+
 
   h1 {
     text-align: center;
-    color: $color-primary;
+    color: variables.$primaryColor;
     margin-top: 5rem;
+    margin-bottom: 8rem;
   }
 
 
    @media (max-width: 860px) {
-      min-height: 200vh;
+      h1 {
+        
+        margin-bottom: 10rem;
+      }
+
     }
 }
 
@@ -82,9 +96,11 @@ $color-shadow: rgba(0, 0, 0, 0.1);
 $primary-color: #6759ef;
 
 .package-card-prices {
-    display: grid !important;
-    grid-template-columns: 50% 50%;
+    // display: grid !important;
+    // grid-template-columns: 50% 50%;
+    display: flex !important;
     align-items: stretch;
+    // align-items: stretch;
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
@@ -98,15 +114,26 @@ $primary-color: #6759ef;
     margin: 0 auto;
 
     .package-prices-image {
+      flex: 2;
+      overflow: hidden;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
+        transition: all 0.3s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
       }
+
+      
     }
 
     .package-prices-content {
+      flex: 1;
       padding: 2rem;
       display: flex;
       flex-direction: column;
@@ -118,7 +145,7 @@ $primary-color: #6759ef;
       h4 {
         margin-top: 2rem;
         margin-bottom: 0.5rem;
-        color: $color-primary;
+        color: variables.$primaryColor;
         letter-spacing: 1px;
       }
 
@@ -128,7 +155,7 @@ $primary-color: #6759ef;
         align-items: center;
         gap: 2rem;
         position: relative;
-        // background-color: $color-bg;
+        // background-color: $variables.$bg-color;
         padding: 1rem 2rem;
         border-radius: 6rem;
         box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.25);
@@ -136,7 +163,7 @@ $primary-color: #6759ef;
         span {
           font-weight: bold;
           font-size: 1.4rem;
-          color: $color-primary;
+          color: variables.$primaryColor;
         }
 
         &::before{
@@ -156,7 +183,7 @@ $primary-color: #6759ef;
         font-size: 1.5rem;
         font-weight: 800;
         margin-bottom: 1rem;
-        color: $color-primary;
+        color: variables.$primaryColor;
       }
 
       p {
@@ -203,12 +230,12 @@ $primary-color: #6759ef;
 // // ===================================
 // // 🎨 Color Variables
 // // ===================================
-// $color-primary: #ff6b6b;        // teal accent (pricing style)
-// $color-primary-dark: #ff6b6b;   // hover teal
+// variables.$primaryColor: #ff6b6b;        // teal accent (pricing style)
+// variables.$primaryColor-dark: #ff6b6b;   // hover teal
 // $color-accent: #ff6b6b;         // coral accent (Perfect Kids)
 // $color-accent-dark: #ff4d4d;    // darker coral for hover
-// $color-bg-main: #fefaf9;        // soft neutral background
-// $color-bg-light: #fff5f5;       // light pink back
+// $variables.$bg-color-main: #fefaf9;        // soft neutral background
+// $variables.$bg-color-light: #fff5f5;       // light pink back
 // $color-white: #ffffff;          // pure white
 // $color-text-main: #004d40;      // dark teal text
 // $color-text-secondary: #333;    // secondary dark text
@@ -225,7 +252,7 @@ $primary-color: #6759ef;
 //   justify-content: center;
 //   align-items: center;
 //   min-height: 100vh; // 600px
-//   background: $color-bg-main;
+//   background: $variables.$bg-color-main;
 
 //   &-inner {
 //     position: relative;
@@ -255,7 +282,7 @@ $primary-color: #6759ef;
 
 //   &-face-back {
 //     transform: rotateY(180deg);
-//     background: $color-bg-light;
+//     background: $variables.$bg-color-light;
 //   }
 
 //   // ---------------------------------
@@ -284,7 +311,7 @@ $primary-color: #6759ef;
 //     }
 
 //     &:hover {
-//       background: $color-primary-dark;
+//       background: variables.$primaryColor-dark;
 //       color: $color-white;
 //       cursor: pointer;
 //     }
@@ -316,13 +343,13 @@ $primary-color: #6759ef;
 //     margin-bottom: 1.5rem;
 
 //     .card-currency {
-//       color: $color-primary;
+//       color: variables.$primaryColor;
 //       font-size: 1.5rem;
 //       vertical-align: super;
 //     }
 
 //     .card-period {
-//       color: $color-primary;
+//       color: variables.$primaryColor;
 //       font-size: 1rem;
 //     }
 //   }
@@ -340,7 +367,7 @@ $primary-color: #6759ef;
 //   }
 
 //   &-signUp {
-//     background: $color-primary;
+//     background: variables.$primaryColor;
 //     color: $color-white;
 //     border: none;
 //     border-radius: 1.5rem;
@@ -349,7 +376,7 @@ $primary-color: #6759ef;
 //     transition: background 0.3s ease;
 
 //     &:hover {
-//       background: $color-primary-dark;
+//       background: variables.$primaryColor-dark;
 //     }
 //   }
 
