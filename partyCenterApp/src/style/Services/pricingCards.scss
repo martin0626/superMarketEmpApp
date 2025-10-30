@@ -40,27 +40,20 @@
   color: variables.$primaryColor;
   background: transparent;
   display: inline-block;
-  padding: 0.9rem 2rem;
+  padding: 0.9rem 1rem;
   border-radius: 50px;
   font-weight: 700;
   text-decoration: none;
   transition: all 0.3s ease;
   width: 8rem;
+  overflow: hidden;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
     background: variables.$primaryColor;
     color: #fff;
     box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.5);
-  }
-
-  @media (max-width: 600px) {
-      &:hover {
-        cursor: pointer;
-        background: transparent;
-        color: variables.$primaryColor;
-        box-shadow: none;
-      }
   }
 }
 
@@ -113,6 +106,8 @@ $primary-color: #6759ef;
 
     margin: 0 auto;
 
+    
+
     .package-prices-image {
       flex: 2;
       overflow: hidden;
@@ -147,6 +142,7 @@ $primary-color: #6759ef;
         margin-bottom: 0.5rem;
         color: variables.$primaryColor;
         letter-spacing: 1px;
+        font-size: 1.4rem;
       }
 
       &-price {
@@ -180,8 +176,8 @@ $primary-color: #6759ef;
       }
 
       h3 {
-        font-size: 1.5rem;
-        font-weight: 800;
+        font-size: 2.2rem;
+        font-weight: 400;
         margin-bottom: 1rem;
         color: variables.$primaryColor;
       }
@@ -206,6 +202,24 @@ $primary-color: #6759ef;
 
         .package-prices-image {
           height: 42rem;
+        }
+    }
+
+    @media (max-width: 620px) {
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+
+        .package-prices-image {
+          flex: 1;
+        }
+
+        .package-prices-content {
+          flex: 1;
+
+          h4 {
+            margin-top: 5rem;
+          }
         }
     }
   }

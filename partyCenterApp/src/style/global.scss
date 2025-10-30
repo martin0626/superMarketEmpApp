@@ -1,5 +1,8 @@
 @use './variables';
 
+
+
+
 .button-white {
     border: 2px solid #fff;
     color: #fff;
@@ -60,6 +63,40 @@
   }
 
 
+
+
+  @mixin card() {
+    font-family: variables.$font-headings;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+  }
+
+
+  .heading-primary{
+    text-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.123);
+    font-size: 4rem !important;
+    @include card();
+    text-transform: capitalize;
+  }
+
+
+  .heading-secondary{
+    font-size: 3rem !important;
+    @include card();
+  }
+
+ 
+
+  .heading-small{
+    font-size: 2.4rem !important;
+    @include card();
+  }
+
+
+  h1, h2, h3, h4, h5 {
+    @include card();
+  }
 
   //Animations
 

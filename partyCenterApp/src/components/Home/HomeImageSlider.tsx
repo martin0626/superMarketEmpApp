@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import FlyBalloon from "../FlyBalloon";
 
 type SlideshowProps=  {
   images: string[];
@@ -32,6 +33,9 @@ const [current, setCurrent] = useState(0);
 
     return (
     <section className="slideshow">
+        <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
+        <FlyBalloon color={"#E4A894"} size={60} left={"50%"} />
+        <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
         {images.map((img, index) => (
         <div
             key={index}

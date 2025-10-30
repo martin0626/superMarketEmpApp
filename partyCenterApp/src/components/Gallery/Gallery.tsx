@@ -66,7 +66,7 @@ export default function Gallery() {
     <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
     <div className="gallery-container">
       <div className="gallery-header">
-        <h2 className="gallery-title">Gallery</h2>
+        <h2 className="gallery-title heading-primary">Gallery</h2>
         <div className="gallery-divider" />
         <p className="gallery-subtitle">
           Our parties are always bright and fun.

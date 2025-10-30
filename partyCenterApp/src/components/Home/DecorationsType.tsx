@@ -48,7 +48,7 @@ export default function DecorationTypes(){
       <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <div className="packages-container">
         <div className="packages-header">
-          <h2 className="packages-title">Our Packages</h2>
+          <h2 className="packages-title heading-primary">Нашите предложения</h2>
           <div className="packages-divider" />
           <p className="packages-subtitle">
             Here’s a short description of the available packages.
@@ -67,7 +67,7 @@ export default function DecorationTypes(){
                 </div>
 
                 <div className="package-content">
-                  <h3 style={{ color: item.color }}>{item.title}</h3>
+                  <h3  style={{ color: item.color }}>{item.title}</h3>
                   <p>{item.description}</p>
                   <Link 
                     to='/services'

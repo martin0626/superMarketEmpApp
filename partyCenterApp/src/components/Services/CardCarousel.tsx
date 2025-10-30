@@ -37,7 +37,7 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
       <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
       <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
       <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
-      <h1>{title}</h1>
+      <h1 className="heading-primary">{title}</h1>
       <Slider {...settings}>
         {
           cards.map((card, index)=><div

@@ -35,11 +35,11 @@ export default function GalleryHome(){
       <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
       <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
       <div className="gallery-container">
-        <div className="gallery-header">
-          <h2 className="gallery-title">Gallery</h2>
+        <div className="gallery-header ">
+          <h2 className="gallery-title heading-primary">Галерия</h2>
           <div className="gallery-divider" />
           <p className="gallery-subtitle">
-            Our parties are always bright and fun.
+            Нашите събития винаги са шарени и красиви.
           </p>
         </div>
 

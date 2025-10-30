@@ -8,20 +8,20 @@
 
 // Variables
 $navbar-bg: #ffffff;
-$navbar-text: #333333f1;
+$navbar-text: #838383;
 $transition: 0.3s ease-in-out;
 $z-navbar: 1000;
 
 
 
 
+
 // Global reset for links
 a {
-    font-weight: bold;    
     text-decoration: none;
     color: inherit;
     transition: color $transition;
-    font-weight: bold;
+    // font-weight: bold;
 }
 
 // Navbar Base
@@ -33,6 +33,7 @@ a {
     background: $navbar-bg;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     z-index: $z-navbar;
+    padding: 0.3rem;
 
     &__container {
         max-width: 90%;
@@ -60,11 +61,10 @@ a {
         transition: all 0.3s;
 
         a {
-            font-weight: bold;
             font-size: 1.2rem;
             color: $navbar-text;
-            font-weight: bold;
             letter-spacing: 1px;
+            font-family: variables.$font-headings;
 
             &::first-letter {
                 color: variables.$primaryColor;
@@ -87,16 +87,13 @@ a {
             color: $navbar-text;
             display: block;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.6rem;
             transition: all 0.3s;
 
             &:hover {
                 color: variables.$primaryColor;
             }
-            &::first-letter {
-                color: variables.$primaryColor;
-                font-size: 1.4rem;
-            }
+            
 
             @media (min-width: 768px) {
                 display: none;
@@ -152,18 +149,16 @@ a {
         gap: 2rem;
 
         a {
-
-            font-weight: bold;
             font-size: 1.4rem;
             color: $navbar-text;
-            font-weight: bold;
             letter-spacing: 1px;
             transition: all 0.3s;
+            font-family: variables.$font-headings;
 
         
             &::first-letter {
                 color: variables.$primaryColor;
-                font-size: 3.2rem;
+                font-size: 2rem;
             }
 
             &:hover {
@@ -202,7 +197,7 @@ a {
 
 .menu-btn {
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     padding: 0.6rem 1rem 0.4rem 1rem;
     border-radius: 8px;
     border: none;
@@ -215,10 +210,6 @@ a {
     transition: all 0.3s;
     background-color: #fff;
     box-shadow: variables.$mainShodws;
-
-    &::first-letter {
-        font-size: 1.4rem;
-    }
 
     &:hover{
         background-color: variables.$primaryColor;

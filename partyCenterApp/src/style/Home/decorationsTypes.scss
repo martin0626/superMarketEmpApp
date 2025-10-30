@@ -83,14 +83,14 @@ $primary-color: #6759ef;
       align-items: center;
 
       h3 {
-        font-size: 1.5rem;
+        font-size: 2rem;
         font-weight: 800;
         margin-bottom: 1rem;
       }
 
       p {
         color: #555;
-        font-size: 1rem;
+        font-size: 1.2rem;
         line-height: 1.7;
         margin-bottom: 1.5rem;
       }
@@ -117,7 +117,7 @@ $primary-color: #6759ef;
   @media (max-width: 48rem) {
     .package-card {
       flex-direction: column !important;
-      min-height: 62rem;
+      min-height: 65rem;
 
       .package-image {
         max-height: 42rem;

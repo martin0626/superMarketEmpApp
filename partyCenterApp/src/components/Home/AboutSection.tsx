@@ -23,31 +23,24 @@ export default function AboutSection(){
           <img src="https://www.elliesparty.com/cdn/shop/products/pink-rainbow-balloon-arch-ombre-balloon-garland-kit-897306.jpg?v=1684344984" alt="Perfect Kids Party" className="about-image" />
         </div>
         <div className="about-content">
-          <h2 className="about-title">About Perfect Kids</h2>
+          <h2 className="about-title">Ние сме Щастливите Балони</h2>
           <p className="about-intro">
-            We've already done more than{" "}
-            <span className="about-highlight">340 #perfectkidsparties</span>. Our main
-            clients are kids and we know how to make them happy.
+            Ние сме семеен бизнес, специализиран в създаването на уникални и стилни балонни декорации за всякакви събития като рождени дни, 
+            детски партита, фирмени тържества и други специални поводи. Работим в <span className="about-highlight">района на София и околните области</span>, като предлагаме разнообразие от балонни арки, гирлянди, 
+            букви и индивидуални декорации, които могат да бъдат персонализирани според вашите желания и темата на събитието.
+            . Нашите украси от балони придават специално настроение на всеки повод!
           </p>
-          <p className="about-text">
-            The company was founded by three moms of little boys and girls aimed to share
-            their experience of throwing parties and make parents' lives easier. Alice,
-            Robin, and Lucy, three founders of the company, had quite a journey planning
-            parties for their children and faced all the possible complications and
-            challenges.
+
+          <p className="about-intro">
+            Всяка поръчка получава специално внимание и креативен подход, за да осигурим бързо, качествено и надеждно обслужване. 
+            Ние не просто украсяваме – ние създаваме спомени и неповторима атмосфера, които ще бъдат запомнени дълго след като събитието е приключило.
           </p>
-          <p className="about-text">
-            It was not an easy task, so in the end, they had to figure out the easiest way
-            for parents to relax while kids are having fun and developed their own methods
-            of planning, organizing, and carrying out an original party.
-          </p>
+          
           <div className="about-buttons">
             <a onClick={()=> scrollToSection("contact-section")} className="button-primary">
-              Contact Us
+              Свържете се с нас
             </a>
-            <a href="#" className="button-primary-outlined">
-              Learn More
-            </a>
+            
           </div>
         </div>
       </div>

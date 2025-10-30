@@ -1,7 +1,7 @@
 // import StaggeredMenu from './StaggeredMenu';
 
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logoImg from '../../assets/LogoBalloons.png'
 import { FaBars, FaXmark } from "react-icons/fa6";
 import SocialIcons from "./Socials";
@@ -28,7 +28,7 @@ export default function NavigationComp(){
       <div className="navbar__container">
         {/* Logo */}
         <div className="navbar-logo logo-image">
-          <img src={logoImg} alt="Logo Image" />
+          <Link to="/."><img src={logoImg} alt="Logo Image" /></Link>
         </div>
 
         {/* Desktop Links */}
@@ -51,14 +51,15 @@ export default function NavigationComp(){
           </NavLink>
           <NavLink   
             className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
+                isActive ? "active-nav " : ""
             }  
             to="/gallery" 
             onClick={handleLinkClick}>
               Галерия
           </NavLink>
           <a   
-            onClick={()=> scrollToSection("contact-section")}>
+            onClick={()=> scrollToSection("contact-section")}
+            >
               Контакти
           </a>
         </div>
@@ -80,7 +81,7 @@ export default function NavigationComp(){
         <div className="mobile-menu__header">
           {/* Logo */}
           <div className="navbar-logo logo-image">
-            <img src={logoImg} alt="Logo Image" />
+            <Link to="/."><img src={logoImg} alt="Logo Image" /></Link>
           </div>
           <button
             className="mobile-menu__close"
@@ -94,7 +95,7 @@ export default function NavigationComp(){
         <div className="mobile-menu__links">
           <NavLink   
             className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
+                isActive ? "active-nav " : ""
             }  
             to="/" 
             onClick={handleLinkClick}>
@@ -117,11 +118,14 @@ export default function NavigationComp(){
               Галерия
           </NavLink>
           <a  
-            onClick={()=> scrollToSection("contact-section")}>
+            onClick={()=> scrollToSection("contact-section")}
+            
+          >
               Контакти
           </a>
         </div>
-        <SocialIcons/>
+        
+          <SocialIcons/>
       </aside>
 
       {/* Overlay */}

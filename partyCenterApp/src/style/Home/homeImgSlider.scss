@@ -9,7 +9,7 @@ $text-color: #ffff;
 $overlay-gradient: linear-gradient(
   to bottom,
   #d9a19b27,
-  #d9a19b33,
+  #d9a19bb2,
   variables.$primaryColor
 );
 
@@ -63,15 +63,16 @@ $overlay-gradient: linear-gradient(
 
 .slideshow-title {
   color: $text-color;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(3.5rem, 5vw, 4rem);
   font-weight: 800;
   letter-spacing: 1px;
   margin-bottom: 0.5rem;
-  text-shadow: 0 4px 10px rgba(0, 0, 0, 0.486);
+  text-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.205);
 }
 
 .slideshow-subtitle {
   color: $text-color;
-  font-size: clamp(1.2rem, 2vw, 1.8rem);
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  text-shadow: 0 0.2rem 0.1rem rgba(0, 0, 0, 0.315);
+  font-family: variables.$font-headings;
 }

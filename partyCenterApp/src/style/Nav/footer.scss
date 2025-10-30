@@ -48,12 +48,14 @@ $color-white: #ffffff;
 
             a {
                 font-weight: 600;
-                font-size: 1rem;
+                font-size: 1.4rem;
                 cursor: pointer;
                 color: variables.$primaryColor;
                 transition: all 0.2s ease;
                 letter-spacing: 1px;
-
+                font-family: "Pacifico", cursive;
+                font-weight: 400;
+                font-style: normal;
             
 
                 &:hover {

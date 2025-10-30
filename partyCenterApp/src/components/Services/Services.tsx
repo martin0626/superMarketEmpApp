@@ -1,7 +1,4 @@
-import { title } from "framer-motion/client";
 import CardCarousel from "./CardCarousel";
-import Pricing from "./Pricing";
-import PricingCard from "./PricingCard";
 
 
 export type priceCardT = {
@@ -15,7 +12,7 @@ export type priceCardT = {
 
 export default function Services() {
 
-  let cards: priceCardT[] = [
+  let arcs: priceCardT[] = [
     {
       title: "Малка Арка",
       btnName: "Малка",
@@ -39,12 +36,31 @@ export default function Services() {
     }
   ]
 
+
+  let deocorations: priceCardT[] = [
+    
+    {
+      title: "Балони с хелий",
+      btnName: "Хелий",
+      price: 100,
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui doloremque architecto deserunt dolorem ut nam reprehenderit eligendi animi natus culpa magnam, id eaque, doloribus aperiam quam maiores sequi sint tenetur.",
+      img: 'https://www.prettymyparty.com/wp-content/uploads/2017/06/DIY-balloon-tassel-garlands.jpeg'
+    },
+    {
+      title: "Декорация за маси",
+      btnName: "Декорация",
+      price: 100,
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui doloremque architecto deserunt dolorem ut nam reprehenderit eligendi animi natus culpa magnam, id eaque, doloribus aperiam quam maiores sequi sint tenetur.",
+      img: 'https://www.balloonsgalore.net.au/wp-content/uploads/2025/04/1000000100-scaled.jpg'
+    }
+  ]
+
   return (
     <section className="show-top">
         {/* <Pricing/> */}
         {/* <PricingCard/> */}
-        <CardCarousel cards={cards} title={"Нашите Арки"}/>
-        <CardCarousel cards={cards} title={"Украса за повод"}/>
+        <CardCarousel cards={arcs} title={"Нашите Арки"}/>
+        <CardCarousel cards={deocorations} title={"Украси"}/>
     </section>
   );
 }
