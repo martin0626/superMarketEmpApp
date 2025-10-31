@@ -74,14 +74,12 @@ export default function NavigationComp(){
         </button>
       </div>
 
-            
-
       {/* Mobile Menu */}
       <aside className={`mobile-menu ${isOpen ? "mobile-menu--open" : ""}`}>
         <div className="mobile-menu__header">
           {/* Logo */}
           <div className="navbar-logo logo-image">
-            <Link to="/."><img src={logoImg} alt="Logo Image" /></Link>
+            <Link onClick={handleLinkClick} to="/."><img src={logoImg} alt="Logo Image" /></Link>
           </div>
           <button
             className="mobile-menu__close"

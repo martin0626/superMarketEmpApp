@@ -70,9 +70,9 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
 
       {selectedImage && (
         <PortalComponent>
-          <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
-            <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
-          </div>
+          
+            <img src={selectedImage} alt="Fullscreen view" />
+          
         </PortalComponent>
       )}
     </section>

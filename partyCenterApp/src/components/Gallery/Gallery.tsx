@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PortalComponent from "../Portal/Portal";
 import FlyBalloon from "../FlyBalloon";
+import PopupImageSlider from "../UI/Popup";
 
 type GalleryImagesT = [string, string, number][];
 
@@ -9,7 +10,9 @@ export default function Gallery() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   
 
-  const images: GalleryImagesT = [
+
+
+  const groupedImages: GalleryImagesT = [
     [ 
       "https://images.squarespace-cdn.com/content/v1/55668890e4b0a63819e5bd65/1723665680396-1ETW91EGY5I1XVG4TAKH/surprise+birthday+balloon+outdoor+organic+arch.jpeg?format=1000w",
       "https://i.etsystatic.com/23753139/r/il/477d06/3672054672/il_570xN.3672054672_e540.jpg",
@@ -57,6 +60,15 @@ export default function Gallery() {
     ],
   ];
 
+
+  const images = groupedImages.reduce((accumulator: string[], currentValue) => {
+    accumulator.push(currentValue[0]);
+    accumulator.push(currentValue[1]);
+    return accumulator;
+  },
+    []
+  );
+
   return <section className="gallery-main show-top">
     <FlyBalloon color={"#fff6f5"} size={80} left={"10%"} />
     <FlyBalloon color={"#9CAD6F"} size={60} left={"30%"} />
@@ -66,7 +78,7 @@ export default function Gallery() {
     <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
     <div className="gallery-container">
       <div className="gallery-header">
-        <h2 className="gallery-title heading-primary">Gallery</h2>
+        <h2 className="gallery-title heading-primary">Галерия</h2>
         <div className="gallery-divider" />
         <p className="gallery-subtitle">
           Our parties are always bright and fun.
@@ -75,7 +87,7 @@ export default function Gallery() {
 
       <article className="gallery-images">
 
-          {images.map((src, index) => (
+          {groupedImages.map((src, index) => (
               <div className={`gallery-two-items-group-${src[2]}`}>
                 <div
                   key={index}
@@ -97,9 +109,7 @@ export default function Gallery() {
 
       {selectedImage && (
         <PortalComponent>
-          <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
-            <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
-          </div>
+            <PopupImageSlider selectedImage={selectedImage} images={images} onClose={() => setSelectedImage(null)} />
         </PortalComponent>
       )}
     </div>

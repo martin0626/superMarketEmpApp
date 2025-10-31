@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import PortalComponent from "../Portal/Portal";
 import FlyBalloon from "../FlyBalloon";
+import PopupImageSlider from "../UI/Popup";
 
 
 type GalleryImagesT = [string, string][];
@@ -9,7 +10,7 @@ type GalleryImagesT = [string, string][];
 export default function GalleryHome(){
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const images: GalleryImagesT = [
+  const groupedImages: GalleryImagesT = [
     [ 
       "https://images.squarespace-cdn.com/content/v1/55668890e4b0a63819e5bd65/1723665680396-1ETW91EGY5I1XVG4TAKH/surprise+birthday+balloon+outdoor+organic+arch.jpeg?format=1000w",
       "https://i.etsystatic.com/23753139/r/il/477d06/3672054672/il_570xN.3672054672_e540.jpg"
@@ -24,7 +25,13 @@ export default function GalleryHome(){
     ],
   ];
 
-  
+  const images = groupedImages.reduce((accumulator: string[], currentValue) => {
+    accumulator.push(currentValue[0]);
+    accumulator.push(currentValue[1]);
+    return accumulator;
+  },
+    []
+  );
 
   return (
     <section className="gallery">
@@ -45,7 +52,7 @@ export default function GalleryHome(){
 
         <article className="gallery-images">
 
-            {images.map((src, index) => (
+            {groupedImages.map((src, index) => (
               <div className={`gallery-two-items-group-${index}`}>
                 <div
                   key={index}
@@ -68,11 +75,10 @@ export default function GalleryHome(){
         <NavLink to="/gallery" style={{marginTop: "4rem"}} className="button-white">
           Виж още...
         </NavLink>
+        
         {selectedImage && (
           <PortalComponent>
-            <div className="gallery-lightbox" onClick={() => setSelectedImage(null)}>
-              <img src={selectedImage} alt="Fullscreen view" className="lightbox-image" />
-            </div>
+            <PopupImageSlider selectedImage={selectedImage} images={images} onClose={() => setSelectedImage(null)} />
           </PortalComponent>
         )}
       </div>
