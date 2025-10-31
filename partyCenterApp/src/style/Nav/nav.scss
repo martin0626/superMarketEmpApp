@@ -197,7 +197,7 @@ a {
 
 .menu-btn {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 1rem;
     padding: 0.6rem 1rem 0.4rem 1rem;
     border-radius: 8px;
     border: none;
@@ -210,6 +210,11 @@ a {
     transition: all 0.3s;
     background-color: #fff;
     box-shadow: variables.$mainShodws;
+
+    @media (max-width: 768px) {
+        font-size: 1.6rem;
+
+    }
 
     &:hover{
         background-color: variables.$primaryColor;
