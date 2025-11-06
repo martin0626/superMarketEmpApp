@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
 import ServicesPage from "./pages/ServicesPage";
 import './style/index.scss';
+import ProductsPage from "./pages/ProductsPage";
 
 
 
@@ -16,6 +17,7 @@ const router = createBrowserRouter([
       { index: true, element: <HomePage /> },
       { path: "gallery", element: <GalleryPage /> },
       { path: "services", element: <ServicesPage/> },
+      { path: "products", element: <ProductsPage/> },
     ],
   },
 ]);

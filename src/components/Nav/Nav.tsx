@@ -6,16 +6,26 @@ import logoImg from '../../assets/LogoBalloons.png'
 import { FaBars, FaXmark } from "react-icons/fa6";
 import SocialIcons from "./Socials";
 
-
+type NavLinksT = {
+  path: string, 
+  label: string
+};
 type NavigationActive = {isActive: boolean};
 
 export default function NavigationComp(){
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const navigate = useNavigate();
-
   const toggleMenu = (): void => setIsOpen((prev) => !prev);
-
   const handleLinkClick = (): void => setIsOpen(false);
+
+  const navLinks: NavLinksT[] = [
+    {path: '/', label: 'Начало'},
+    {path: '/services', label: 'Услуги'},
+    {path: '/gallery', label: 'Галерия'},
+    {path: '/products', label: 'Продукти'},
+  ];
+
+
 
   const scrollToSection = (id: string) => {
       navigate("/", { state: { scrollTo: id } });
@@ -33,30 +43,16 @@ export default function NavigationComp(){
 
         {/* Desktop Links */}
         <div className="navbar__links">
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/" 
-            onClick={handleLinkClick}>
-              Начало
-          </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/services" 
-            onClick={handleLinkClick}>
-              Услуги
-          </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav " : ""
-            }  
-            to="/gallery" 
-            onClick={handleLinkClick}>
-              Галерия
-          </NavLink>
+          {
+            navLinks.map(linkEl => <NavLink   
+              className={({isActive}: NavigationActive ) =>
+                  isActive ? "active-nav" : ""
+              }  
+              to={linkEl.path} 
+              onClick={handleLinkClick}>
+                {linkEl.label}
+            </NavLink>)
+          }
           <a   
             onClick={()=> scrollToSection("contact-section")}
             >
@@ -91,30 +87,17 @@ export default function NavigationComp(){
         </div>
 
         <div className="mobile-menu__links">
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav " : ""
-            }  
-            to="/" 
-            onClick={handleLinkClick}>
-              Начало
-          </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/services" 
-            onClick={handleLinkClick}>
-              Услуги
-          </NavLink>
-          <NavLink   
-            className={({isActive}: NavigationActive ) =>
-                isActive ? "active-nav" : ""
-            }  
-            to="/gallery" 
-            onClick={handleLinkClick}>
-              Галерия
-          </NavLink>
+
+          {
+            navLinks.map(linkEl => <NavLink   
+              className={({isActive}: NavigationActive ) =>
+                  isActive ? "active-nav" : ""
+              }  
+              to={linkEl.path} 
+              onClick={handleLinkClick}>
+                {linkEl.label}
+            </NavLink>)
+          }
           <a  
             onClick={()=> scrollToSection("contact-section")}
             
