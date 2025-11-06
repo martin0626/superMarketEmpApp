@@ -37,7 +37,10 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
       <FlyBalloon color={"#C288FF"} size={80} left={"70%"} />
       <FlyBalloon color={"#f9b233"} size={80} left={"90%"} />
       <FlyBalloon color={"#E4A894"} size={80} left={"100%"} />
-      <h1 className="heading-primary">{title}</h1>
+      <div className="heading-pricing">
+        <h1 className="heading-primary">{title}</h1>
+        <p>Посочените цени може да варират в зависимост от конкретните изисквания на клиента.</p>
+      </div>
       <Slider {...settings}>
         {
           cards.map((card, index)=><div
@@ -54,8 +57,7 @@ export default function CardCarousel({cards, title}: cardCarouselPropsT) {
                         <h4>Ценa:</h4>
 
                         <div className="package-prices-content-price">
-                          <p>От <span>{card.price}</span> лв.</p>
-                          <p>До <span>{card.price * 2}</span> лв.</p>
+                          <p>От <span>{card.price}</span> {card.priceForPeace ? "лв./бр." : "лв."}</p>
                         </div>
                         <button
                           className="button-primary"

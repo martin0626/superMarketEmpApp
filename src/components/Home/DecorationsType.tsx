@@ -15,25 +15,25 @@ type DecaorationDescriptionT = {
 export default function DecorationTypes(){
   const packages: DecaorationDescriptionT[] = [
     {
-      title: "Back to Classics",
+      title: "Арки за всякакви събития",
       description:
-        "Classics are proven with time and generations and never get old, no matter how much smartphones and social media conquer kids’ minds. Amazing music, designed themes, and active games have been the main ingredients of a fun party for many centuries and generations.",
+        "Нашите балонени арки са идеалното допълнение за всяко събитие – от сватби и юбилеи до детски партита и корпоративни мероприятия. Те създават красив фон и придават уникално излъчване на всяко място. Съчетаваме различни цветове, форми и стилове, за да създадем перфектната арка, която отразява вашите желания и визия за събитието.",
       img: "https://tinsleytreasures.com/cdn/shop/files/IMG_2513_jpg.jpg?v=1731428931&width=1445",
       color: "#ff6b6b",
     },
     {
-      title: "Deluxe Party",
+      title: "Допълнителна украса с хелий",
       description:
-        "Deluxe Party is a great option for those who do not settle for less. If you want to go all the way in for your kid’s holiday, that’s exactly the option for you. Your kid’s favorite heroes, rare themes, and multi-level quests and games – and it’s not even a full list yet.",
-      img: "https://i.etsystatic.com/23753139/r/il/477d06/3672054672/il_570xN.3672054672_e540.jpg",
+        "Добавете ефирност и стил към вашето събитие с балони, пълни с хелий. Те не само че изглеждат невероятно, но също така могат да летят в пространството, създавайки магическа атмосфера. Балоните с хелий са перфектни за сватби, партита, годишнини и всякакви специални събития.",
+      img: "https://www.balloonbutlers.com.au/cdn/shop/products/GoldGreen.webp?v=1667821839",
       color: "#9CAD6F",
       reverse: true,
     },
     {
-      title: "Ultimate Party",
+      title: "Допълнителна декорация",
       description:
-        "The Ultimate Party is the pinnacle of celebration! Perfect for larger groups and unforgettable experiences with top-tier activities, performances, and full customization for every detail.",
-      img: "https://i.pinimg.com/736x/44/4c/b6/444cb60fb413c4c9aa8d983eacf494f9.jpg",
+        "Независимо дали става дума за сватба, корпоративно събитие или детски рожден ден, ние предлагаме пълна гама от декорации, които ще създадат перфектната атмосфера. Декорациите могат да включват не само балони, но и други елементи, които да придадат изисканост и оригиналност на вашето събитие.",
+      img: "https://miamipartydecor.com/wp-content/uploads/balloon-decorating-ideas_0007_balloon-decoration-ideas-for-tables-853x1024.jpg.webp",
       color: "#f9b233",
     },
   ];
@@ -51,7 +51,7 @@ export default function DecorationTypes(){
           <h2 className="packages-title heading-primary">Нашите предложения</h2>
           <div className="packages-divider" />
           <p className="packages-subtitle">
-            Here’s a short description of the available packages.
+            Кратко описание на нашите най-търсени предложения.
           </p>
         </div>
 
@@ -74,7 +74,7 @@ export default function DecorationTypes(){
                     className="package-btn"
                     style={{ borderColor: item.color, color: item.color }}
                   >
-                    Learn More
+                    Виж още...
                   </Link>
                 </div>
               </div>

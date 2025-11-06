@@ -52,10 +52,11 @@ $primary-color: #6759ef;
     background: #fff;
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.05);
+    // box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0.5rem 1.2rem rgba(0, 0, 0, 0.5);
     text-align: left;
     transition: transform 0.3s ease;
-    height: 32rem;
+    height: 35rem;
 
     &:hover {
       transform: translateY(-0.5rem);
@@ -117,7 +118,7 @@ $primary-color: #6759ef;
   @media (max-width: 48rem) {
     .package-card {
       flex-direction: column !important;
-      min-height: 65rem;
+      min-height: 75rem;
 
       .package-image {
         max-height: 42rem;
