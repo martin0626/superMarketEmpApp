@@ -2,14 +2,6 @@
   command = "npm run build"
   publish = "dist"
 
-[[plugins]]
-  package = "netlify-plugin-prerender-spa"
-
-  [plugins.inputs]
-  staticRoutes = ["/", "/services", "/gallery"]
-  renderAfterTime = 5000
-  debug = true
-
 [[redirects]]
   from = "/*"
   to = "/index.html"
