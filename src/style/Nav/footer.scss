@@ -68,7 +68,7 @@ $color-white: #ffffff;
             display: flex;
             justify-content: center;
             gap: 1.5rem;
-            margin-bottom: 3rem;
+            margin-bottom: 1.5rem;
 
         .footer-icon {
             width: 55px;
@@ -114,4 +114,19 @@ $color-white: #ffffff;
                 }
             }
         }
+}
+
+
+.location-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    color: variables.$primaryColor;
+    font-family: variables.$font-headings !important;
+
+    svg {
+        font-size: 1.6rem;
+    }
 }

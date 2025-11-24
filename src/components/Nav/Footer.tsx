@@ -3,6 +3,7 @@ import { SiGmail } from "react-icons/si";
 import { NavLink, useNavigate } from "react-router-dom";
 import logoImg from '../../assets/LogoBalloons-NoBG.png'
 import AnimatedOnScroll from "../Global/AnimationOnScroll";
+import { FaLocationDot } from "react-icons/fa6";
 
 
 export default function Footer(){
@@ -36,6 +37,13 @@ export default function Footer(){
           <a className="footer-icon" href="https://www.facebook.com/" target="__blank"><FaFacebookF /></a>
           <a className="footer-icon" href="mailto:someone@example.com" target="__blank"><SiGmail /></a>
           <a className="footer-icon" target="__blank"><FaPhoneAlt /></a>
+        </div>
+      </AnimatedOnScroll>
+
+      <AnimatedOnScroll delay={250} animation ="fade-up">
+        <div className="location-info">
+          <FaLocationDot />
+          <h3>гр.София / София Област</h3>
         </div>
       </AnimatedOnScroll>
 

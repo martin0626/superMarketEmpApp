@@ -39,28 +39,28 @@ export default function ContactHome(){
   const sendEmail = async (formHTML: HTMLFormElement)=>{
         setSending(true);
         try{
-            await emailSender(formHTML);
-            formHTML.reset()
-            setSending(false);
-            setEmailSuccess(true);
-            setFormMsg('Имейлът е изпратен успешно! Ще се свържем с Вас скоро.')
+          await emailSender(formHTML);
+          formHTML.reset()
+          setSending(false);
+          setEmailSuccess(true);
+          setFormMsg('Имейлът е изпратен успешно! Ще се свържем с Вас скоро.')
 
 
-            setTimeout(()=>{
-              setFormMsg("");
-              setEmailSuccess(false);
-            }, 5000)
-
-        }catch(err){
-            setSending(false);
-            formHTML.reset()
-            setFormMsg("Нещо се обърка! Моля изберете друг начин да се свържете с нас.");
+          setTimeout(()=>{
+            setFormMsg("");
             setEmailSuccess(false);
+          }, 5000)
+        }catch(err){
+          console.log(err);
+          setSending(false);
+          formHTML.reset()
+          setFormMsg("Нещо се обърка! Моля изберете друг начин да се свържете с нас.");
+          setEmailSuccess(false);
 
-            setTimeout(()=>{
-              setFormMsg("");
-              setEmailSuccess(false);
-            }, 5000)
+          setTimeout(()=>{
+            setFormMsg("");
+            setEmailSuccess(false);
+          }, 5000)
         }
     }
 
